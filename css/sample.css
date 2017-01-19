@@ -48,7 +48,7 @@ p.questionText {
   position: relative;
   transition: 0.5s;
 }
-.blah{width: 100px}
+
 .button span:after {
   content: '\00bb';
   position: absolute;
