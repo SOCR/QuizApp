@@ -34,40 +34,15 @@
 
 		<!-- Import JS files -->
 		<script src="./js/jquery.js"></script>
-		<script src="./js/bootstrap-modal.js"></script>
+  <script src="./js/bootstrap-modal.js"></script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/sample.js"></script>
+	<script src="js/quizapp.js"></script>
 </head>
 
 <body>
 
-    <!-- Trigger Modal-->
-	<script>
-        $(document).ready(function() {
-                $('#myModal').modal('show');
-        });
-	</script>
-
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog modal-lg">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Instruction</h4>
-				</div>
-				<div class="modal-body">
-					<p>The SOCR Quiz App is a web-based application. It is designed to test the user's knowledge of
-						bioinformatics and machine learning concepts using a multiple-choice style quiz.</p>
-					<p>Questions will be divided into categories, and a simple points system will be used to keep score.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
-				</div>
-			</div>
-
-		</div>
-	</div>
 
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -245,6 +220,75 @@
               	
                 <p>App goes here</p>
                <!-- Begin Body HTML Code -->
+
+				<!-- Start Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Instruction</h4>
+							</div>
+							<div class="modal-body">
+									<p>The SOCR Quiz App is a web-based application. It is designed to test the user's knowledge of bioinformatics and machine learning concepts using a multiple-choice style quiz.</p>
+									<p>Questions will be divided into categories, and a simple points system will be used to keep score.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" id = "start-btn" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<!-- Category Picking Model -->
+
+				<!-- Modal -->
+				<div class="modal fade" id="categoryPicker" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Choose A Category</h4>
+							</div>
+							<div class="modal-body">
+								<p>Select one</p>
+								<ul class = "categories"> </ul>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<!-- Category Picking Model -->
+
+
+
+
+
+				<div class="UI">
+
+					<h5 class="score">Score: </h5>
+					<h6 class ="category"> </h6>
+					<p class="questionText">Question: </p>
+					<ul class="answers"></ul>
+					<button onclick="submitButton">Submit Answer</button>
+				</div>
+
+
+
 
 
 
