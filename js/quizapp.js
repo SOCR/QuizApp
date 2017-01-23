@@ -134,7 +134,7 @@ $(document).ready(function () {
 });
 
 
-
+//Given a cateogory ID, this function displays a random question from that category
 function getRandomQuestion(id){
     // determine the number of questions in the current category
     var numQuestions = categories[id].questions.length;
@@ -152,17 +152,19 @@ function getRandomQuestion(id){
 }
 
 
-
+//Give a categoryid and questionid, this function displays a question.
 function displayQuestion(categoryID, currentQuestion ) {
 
     //select the category name and add it the category section
     var category = categories[categoryID].name;
     var categoryClass = $(document).find(".UI > .category");
+    //Throw error if category has no name
+
     $(categoryClass).text(category);
 
     //select the question text and add it question section
     var question =   categories[categoryID].questions[currentQuestion].questionText;
-    console.log(question);
+   // console.log(question);
     var questionClass = $(document).find(".UI > .questionText");
     $(questionClass).text(question);
 
@@ -171,10 +173,16 @@ function displayQuestion(categoryID, currentQuestion ) {
     var answersList =  $(document).find(".UI > .answers");
 
 
+    answerIndex= 0;
+    var answersArray = categories[categoryID].questions[currentQuestion].answers;
+    answersArray = shuffle(answersArray, answerIndex);
+    console.log(answerIndex);
+
     //go through the possible number of answers and create a answer box
     var choice;
     for (i = 0; i < numChoices; i++) {
-        choice = categories[categoryID].questions[currentQuestion].answers[i];
+       // choice = categories[categoryID].questions[currentQuestion].answers[i];
+        choice = answersArray[i];
         $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(answersList);
     }
 
@@ -182,6 +190,28 @@ function displayQuestion(categoryID, currentQuestion ) {
 
 }
 
+//Fisher-Yates (aka Knuth) Shuffle.
+function shuffle(array, answerIndex) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        if(currentIndex == 0){
+            answerIndex = randomIndex;
+        }
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
 
 
 
