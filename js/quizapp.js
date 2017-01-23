@@ -3,9 +3,9 @@
  */
 
 
-$(function(){
+//$(function(){
 
-    categories = [
+    var categories=[
         {
             name: "Physics",
             questions:[
@@ -94,7 +94,8 @@ $(function(){
 
     ]
 
-});
+//});
+
 
 
 $(document).ready(function () {
@@ -115,7 +116,8 @@ $(document).ready(function () {
 
     $(startMenu).modal('show').on("hidden", function () {
         $(categoryMenu).modal('show');
-        $(categoryList).text(numCategories);
+        //$(categoryList).text(numCategories);
+        //$(categoryList).text(numCategories);
         for (i = 0; i < numCategories; i++) {
             //$(categoryList).catlist = '<input type="radio" + value = ' + categories.name[i] + '><br/>';
             //document.getElementsByClassName('category_list').innerHTML += catList;
