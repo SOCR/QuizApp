@@ -100,7 +100,7 @@ $(function(){
 $(document).ready(function () {
 
 
-    
+
 
 
     //intialize current quest and categoryID to zero
@@ -115,11 +115,12 @@ $(document).ready(function () {
 
     $(startMenu).modal('show').on("hidden", function () {
         $(categoryMenu).modal('show');
-        var catList = "";
-        document.getElementsByClassName('categories').innerHTML = "";
+        //$(categoryList).text("hello!");
         for (i = 0; i < numCategories; i++) {
-            catList = "<li>" + categories.name[i] + "</li>"
-            document.getElementsByClassName('categories').innerHTML += catList;
+            //$(categoryList).catlist = '<input type="radio" + value = ' + categories.name[i] + '><br/>';
+            //document.getElementsByClassName('category_list').innerHTML += catList;
+            var choice = categories[i].name;
+            $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(categoryList);
 
             /*
             var category = categories[i].name;
