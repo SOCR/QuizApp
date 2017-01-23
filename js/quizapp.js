@@ -99,6 +99,10 @@ $(function(){
 
 $(document).ready(function () {
 
+
+    
+
+
     //intialize current quest and categoryID to zero
     var currentQuestion = 0;
     var categoryID = 0;
@@ -111,15 +115,17 @@ $(document).ready(function () {
 
     $(startMenu).modal('show').on("hidden", function () {
         $(categoryMenu).modal('show');
-
-
-        /*
+        var catList = "";
+        document.getElementsByClassName('categories').innerHTML = "";
         for (i = 0; i < numCategories; i++) {
+            catList = "<li>" + categories.name[i] + "</li>"
+            document.getElementsByClassName('categories').innerHTML += catList;
 
+            /*
             var category = categories[i].name;
-            $('<li><value= "category" + choice + '</li>').appendTo(category);
+            $('<li><value= "category" + choice + '</li>').appendTo(category);*/
         }
-         */
+
 
     });
 
