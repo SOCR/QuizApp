@@ -121,7 +121,7 @@ $(document).ready(function () {
         }
          */
 
-    });
+   });
 
 
 
@@ -173,10 +173,11 @@ function displayQuestion(categoryID, currentQuestion ) {
     var answersList =  $(document).find(".UI > .answers");
 
 
-    answerIndex= 0;
+    var answerIndex = 0;
     var answersArray = categories[categoryID].questions[currentQuestion].answers;
+
     answersArray = shuffle(answersArray, answerIndex);
-    console.log(answerIndex);
+
 
     //go through the possible number of answers and create a answer box
     var choice;
@@ -193,21 +194,26 @@ function displayQuestion(categoryID, currentQuestion ) {
 //Fisher-Yates (aka Knuth) Shuffle.
 function shuffle(array, answerIndex) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-
+    var correctAnswerSeen = false;
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
 
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-        if(currentIndex == 0){
-            answerIndex = randomIndex;
+        //If the question to moved is the first index (the real answer), and it is the first time it is moved, set that true answerIndex to
+        //the current Index to be changed and set the bool to true
+        if(randomIndex == 0 && correctAnswerSeen == false){
+            answerIndex = currentIndex;
+            correctAnswerSeen = true;
         }
+
 
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
+
     }
 
     return array;
