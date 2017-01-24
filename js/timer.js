@@ -1,7 +1,2 @@
-<button onclick="setTimeout(myFunction, 500000)">Try it</button>
+<button onclick="setTimeout(calcScore, 500000)">Start the quiz</button>
 
-<script>
-function myFunction() {
-    alert('Hello');
-}
-</script>
