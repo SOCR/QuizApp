@@ -1,4 +1,4 @@
-<button onclick="setTimeout(myFunction, 3000)">Try it</button>
+<button onclick="setTimeout(myFunction, 500000)">Try it</button>
 
 <script>
 function myFunction() {
