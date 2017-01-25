@@ -2,6 +2,12 @@
  * Created by jakeclose on 1/16/17.
  */
 
+var currentQuestion;
+var categoryID;
+var score = 0 ;
+var questionsSeen = 0;
+var trueAnswer;
+var currentCategoryID;
 
 $(function(){
 
@@ -50,6 +56,7 @@ $(function(){
                 {
                     questionText:"sample question1",
                     answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
+
                 },
                 {
                     questionText:"sample question2",
@@ -64,6 +71,7 @@ $(function(){
                     answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
                 }
             ]
+
         },
 
 
@@ -92,61 +100,43 @@ $(function(){
 
 
 
-    ]
-
-
-
-    //intialize current quest and categoryID to zero
-    var currentQuestion = 0;
-    var categoryID = 0;
-    var score = 0 ;
-    var questionsSeen = 0;
-
+    ];
 
 
     //id for the start menu and category menu
     var startMenu = document.getElementById('myModal');
     var categoryMenu = document.getElementById('categoryPicker');
     var categoryList = document.getElementsByClassName('categories');
-    var numCategories = categories.length;
-    var categoryNames = categories.map(getName);
-    console.log(categoryNames);
+
 
     $(startMenu).modal('show').on("hidden", function () {
-         $(categoryMenu).modal('show');
-         $(categoryList).text("Hello World");
-
-
-        for (i = 0; i < numCategories; i++) {
-            // choice = categories[categoryID].questions[currentQuestion].answers[i];
-            choice = categoryNames[i];
-            $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(categoryList);
-        }
-
-
-
+        displayCategory(categoryMenu, categoryList);
+        showCategoryQuestion(categoryMenu);
 
    });
 
 
 
-
-
-    //function to get a random question givenn category id
-
-    getRandomQuestion(1);
+ //function to get a random question givenn category id
 
 
     $(".submitButton").click(function () {
        // if($("input:radio[name='answerBTN']").is(":checked")) {
             //write your code
-            console.log("pressed");
-       // }
 
+
+        questionsSeen++;
+        var answer =  $("input:radio[name=answerBTN]:checked").val();
+        if( answer == trueAnswer){
+            console.log("Correct Answer");
+            score++;
+        }
+        var answersList =  $(document).find(".UI > .answers");
+        $(answersList).empty();
+
+        $(categoryMenu).modal('show');
 
     });
-
-
 
 
 
@@ -156,11 +146,29 @@ $(function(){
 
 });
 
-getName = function (element) {
-    return element.name;
-};
 
 
+function displayCategory(categoryMenu, categoryList) {
+    $(categoryMenu).modal('show');
+
+
+    for (i = 0; i < categories.length; i++) {
+        // choice = categories[categoryID].questions[currentQuestion].answers[i];
+        choice = categories[i].name;
+        $('<li><input type="radio" value=' + i + ' name="categoryBTN" />' + choice + '</li>').appendTo(categoryList);
+    }
+}
+
+
+function  showCategoryQuestion(categoryMenu) {
+    $(categoryMenu).on("hidden", function () {
+        currentCategoryID = parseInt($("input:radio[name=categoryBTN]:checked").val());
+        if(currentCategoryID < categories.length) {
+            getRandomQuestion(currentCategoryID);
+        }
+
+    });
+}
 
 
 //Given a cateogory ID, this function displays a random question from that category
@@ -172,7 +180,6 @@ function getRandomQuestion(id){
     //set the categoryid and current question to the one were currently looking at
     categoryID =  id;
     currentQuestion = randomID;
-
     //display the question
     displayQuestion(id, randomID);
 
@@ -233,7 +240,7 @@ function shuffle(array, answerIndex) {
         //If the question to moved is the first index (the real answer), and it is the first time it is moved, set that true answerIndex to
         //the current Index to be changed and set the bool to true
         if(randomIndex == 0 && correctAnswerSeen == false){
-            answerIndex = currentIndex;
+            trueAnswer = currentIndex;
             correctAnswerSeen = true;
         }
 
@@ -258,8 +265,8 @@ function displayScore(score, questionsSeen) {
     $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
 
     var percentage = document.getElementsByClassName("score");
-    var finalScore = score/questionsSeen;
-    $(scoreHead).text("For a final score of " + finalScore);
+    var finalScore = (score/questionsSeen)  * 100 ;
+    $(percentage).text("For a final score of " + finalScore);
 
 
 }

@@ -29,6 +29,12 @@ p.questionText {
     list-style-type: none;
     }
 
+
+.categories{
+    list-style-type: none;
+
+}
+
 .button {
   border-radius: 4px;
   background-color: lightgrey;
