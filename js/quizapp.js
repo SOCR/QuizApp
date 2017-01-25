@@ -94,44 +94,73 @@ $(function(){
 
     ]
 
-});
 
-
-$(document).ready(function () {
 
     //intialize current quest and categoryID to zero
     var currentQuestion = 0;
     var categoryID = 0;
+    var score = 0 ;
+    var questionsSeen = 0;
+
+
 
     //id for the start menu and category menu
     var startMenu = document.getElementById('myModal');
     var categoryMenu = document.getElementById('categoryPicker');
     var categoryList = document.getElementsByClassName('categories');
     var numCategories = categories.length;
+    var categoryNames = categories.map(getName);
+    console.log(categoryNames);
 
     $(startMenu).modal('show').on("hidden", function () {
-        $(categoryMenu).modal('show');
+         $(categoryMenu).modal('show');
+         $(categoryList).text("Hello World");
 
 
-        /*
         for (i = 0; i < numCategories; i++) {
-
-            var category = categories[i].name;
-            $('<li><value= "category" + choice + '</li>').appendTo(category);
+            // choice = categories[categoryID].questions[currentQuestion].answers[i];
+            choice = categoryNames[i];
+            $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(categoryList);
         }
-         */
+
+
+
 
    });
 
 
 
+
+
     //function to get a random question givenn category id
 
-    getRandomQuestion(0);
+    getRandomQuestion(1);
 
 
+    $(".submitButton").click(function () {
+       // if($("input:radio[name='answerBTN']").is(":checked")) {
+            //write your code
+            console.log("pressed");
+       // }
+
+
+    });
+
+
+
+
+
+    $( ".endQuiz" ).click(function () {
+        displayScore(score, questionsSeen);
+    });
 
 });
+
+getName = function (element) {
+    return element.name;
+};
+
+
 
 
 //Given a cateogory ID, this function displays a random question from that category
@@ -184,7 +213,7 @@ function displayQuestion(categoryID, currentQuestion ) {
     for (i = 0; i < numChoices; i++) {
        // choice = categories[categoryID].questions[currentQuestion].answers[i];
         choice = answersArray[i];
-        $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(answersList);
+        $('<li><input type="radio" value=' + i + ' name="answerBTN" />' + choice + '</li>').appendTo(answersList);
     }
 
 
@@ -219,6 +248,21 @@ function shuffle(array, answerIndex) {
     return array;
 }
 
+
+function displayScore(score, questionsSeen) {
+    var scoreboard = document.getElementById('scoreboard');
+    $(scoreboard).modal("show");
+
+    var scoreHead = document.getElementsByClassName("scoreHeader");
+    //Throw error if category has no name
+    $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
+
+    var percentage = document.getElementsByClassName("score");
+    var finalScore = score/questionsSeen;
+    $(scoreHead).text("For a final score of " + finalScore);
+
+
+}
 
 
 

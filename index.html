@@ -276,6 +276,33 @@
 
 
 
+				<!-- Modal -->
+				<div class="modal fade" id="scoreboard" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Final Score</h4>
+							</div>
+							<div class="modal-body">
+								<p class = "scoreHeader "> </p>
+								<p class = "score"> </p>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+
 
 
 				<div class="UI">
@@ -284,7 +311,11 @@
 					<h6 class ="category"> </h6>
 					<p class="questionText">Question: </p>
 					<ul class="answers"></ul>
-					<button onclick="submitButton">Submit Answer</button>
+					<button input="submitButton" class = "submitButton">Submit Answer</button>
+
+
+
+					<button input = "endQuiz" class = "endQuiz" > End Quiz</button>
 				</div>
 
 
@@ -292,7 +323,9 @@
 
 
 
-               <!-- End Body HTML Code -->
+
+
+				<!-- End Body HTML Code -->
         
     
 				<!--/row-->
