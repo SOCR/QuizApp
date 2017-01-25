@@ -94,47 +94,76 @@ $(function(){
 
     ]
 
-});
 
-
-$(document).ready(function () {
 
     //intialize current quest and categoryID to zero
     var currentQuestion = 0;
     var categoryID = 0;
+    var score = 0 ;
+    var questionsSeen = 0;
+
+
 
     //id for the start menu and category menu
     var startMenu = document.getElementById('myModal');
     var categoryMenu = document.getElementById('categoryPicker');
     var categoryList = document.getElementsByClassName('categories');
     var numCategories = categories.length;
+    var categoryNames = categories.map(getName);
+    console.log(categoryNames);
 
     $(startMenu).modal('show').on("hidden", function () {
-        $(categoryMenu).modal('show');
+         $(categoryMenu).modal('show');
+         $(categoryList).text("Hello World");
 
 
-        /*
         for (i = 0; i < numCategories; i++) {
-
-            var category = categories[i].name;
-            $('<li><value= "category" + choice + '</li>').appendTo(category);
+            // choice = categories[categoryID].questions[currentQuestion].answers[i];
+            choice = categoryNames[i];
+            $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(categoryList);
         }
-         */
 
-    });
+
+
+
+   });
+
+
 
 
 
     //function to get a random question givenn category id
 
-    getRandomQuestion(0);
+    getRandomQuestion(1);
 
 
+    $(".submitButton").click(function () {
+       // if($("input:radio[name='answerBTN']").is(":checked")) {
+            //write your code
+            console.log("pressed");
+       // }
+
+
+    });
+
+
+
+
+
+    $( ".endQuiz" ).click(function () {
+        displayScore(score, questionsSeen);
+    });
 
 });
 
+getName = function (element) {
+    return element.name;
+};
 
 
+
+
+//Given a cateogory ID, this function displays a random question from that category
 function getRandomQuestion(id){
     // determine the number of questions in the current category
     var numQuestions = categories[id].questions.length;
@@ -152,17 +181,19 @@ function getRandomQuestion(id){
 }
 
 
-
+//Give a categoryid and questionid, this function displays a question.
 function displayQuestion(categoryID, currentQuestion ) {
 
     //select the category name and add it the category section
     var category = categories[categoryID].name;
     var categoryClass = $(document).find(".UI > .category");
+    //Throw error if category has no name
+
     $(categoryClass).text(category);
 
     //select the question text and add it question section
     var question =   categories[categoryID].questions[currentQuestion].questionText;
-    console.log(question);
+   // console.log(question);
     var questionClass = $(document).find(".UI > .questionText");
     $(questionClass).text(question);
 
@@ -171,18 +202,67 @@ function displayQuestion(categoryID, currentQuestion ) {
     var answersList =  $(document).find(".UI > .answers");
 
 
+    var answerIndex = 0;
+    var answersArray = categories[categoryID].questions[currentQuestion].answers;
+
+    answersArray = shuffle(answersArray, answerIndex);
+
+
     //go through the possible number of answers and create a answer box
     var choice;
     for (i = 0; i < numChoices; i++) {
-        choice = categories[categoryID].questions[currentQuestion].answers[i];
-        $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(answersList);
+       // choice = categories[categoryID].questions[currentQuestion].answers[i];
+        choice = answersArray[i];
+        $('<li><input type="radio" value=' + i + ' name="answerBTN" />' + choice + '</li>').appendTo(answersList);
     }
 
 
 
 }
 
+//Fisher-Yates (aka Knuth) Shuffle.
+function shuffle(array, answerIndex) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    var correctAnswerSeen = false;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
 
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        //If the question to moved is the first index (the real answer), and it is the first time it is moved, set that true answerIndex to
+        //the current Index to be changed and set the bool to true
+        if(randomIndex == 0 && correctAnswerSeen == false){
+            answerIndex = currentIndex;
+            correctAnswerSeen = true;
+        }
+
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+
+    }
+
+    return array;
+}
+
+
+function displayScore(score, questionsSeen) {
+    var scoreboard = document.getElementById('scoreboard');
+    $(scoreboard).modal("show");
+
+    var scoreHead = document.getElementsByClassName("scoreHeader");
+    //Throw error if category has no name
+    $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
+
+    var percentage = document.getElementsByClassName("score");
+    var finalScore = score/questionsSeen;
+    $(scoreHead).text("For a final score of " + finalScore);
+
+
+}
 
 
 
