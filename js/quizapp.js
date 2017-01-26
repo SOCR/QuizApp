@@ -216,6 +216,11 @@ function getRandomQuestion(id){
     //set the categoryid and current question to the one were currently looking at
     categoryID =  id;
     currentQuestion = randomID;
+
+    //sanity checks
+    if(randomID < 0 || currentQuestion < 0){
+        throw error;
+    }
     //display the question
     displayQuestion(id, randomID);
 
@@ -226,6 +231,10 @@ function getRandomQuestion(id){
 
 //Give a categoryid and questionid, this function displays a question.
 function displayQuestion(categoryID, currentQuestion ) {
+    if(categoryID < 0 || currentQuestion < 0){
+        throw error;
+
+    }
 
     //select the category name and add it the category section
     var category = categories[categoryID].name;
