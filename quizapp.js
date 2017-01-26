@@ -11,7 +11,7 @@ var currentCategoryID;
 
 $(function(){
 
-    categories=[
+    var categories=[
         {
             name: "Statistics",
             questions:[
@@ -122,18 +122,18 @@ $(function(){
 
     $(".submitButton").click(function () {
         if($("input:radio[name='answerBTN']").is(":checked")) {
-        //write your code
-        questionsSeen++;
-        var answer =  $("input:radio[name=answerBTN]:checked").val();
-        if( answer == trueAnswer){
-            console.log("Correct Answer");
-            score++;
+            //write your code
+            questionsSeen++;
+            var answer = $("input:radio[name=answerBTN]:checked").val();
+            if (answer == trueAnswer) {
+                console.log("Correct Answer");
+                score++;
+            }
+            var answersList = $(document).find(".UI > .answers");
+            $(answersList).empty();
+
+            $(categoryMenu).modal('show');
         }
-        var answersList =  $(document).find(".UI > .answers");
-        $(answersList).empty();
-
-        $(categoryMenu).modal('show');
-
     });
 
 
@@ -150,9 +150,9 @@ function displayCategory(categoryMenu, categoryList) {
     $(categoryMenu).modal('show');
 
 
-    for (i = 0; i < categories.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
         // choice = categories[categoryID].questions[currentQuestion].answers[i];
-        choice = categories[i].name;
+        var choice = categories[i].name;
         $('<li><input type="radio" value=' + i + ' name="categoryBTN" />' + choice + '</li>').appendTo(categoryList);
     }
 }
@@ -215,7 +215,7 @@ function displayQuestion(categoryID, currentQuestion ) {
 
     //go through the possible number of answers and create a answer box
     var choice;
-    for (i = 0; i < numChoices; i++) {
+    for (var i = 0; i < numChoices; i++) {
         // choice = categories[categoryID].questions[currentQuestion].answers[i];
         choice = answersArray[i];
         $('<li><input type="radio" value=' + i + ' name="answerBTN" />' + choice + '</li>').appendTo(answersList);
