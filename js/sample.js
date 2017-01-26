@@ -1,6 +1,7 @@
 //this is a sample version of the JS object used to store the list of questions. The real question list should be at least 20 questions, split among at least 4 categories. Content of the questions list is not important right now
 
 //all javascript code should be enclosed inside a $(function(){ statement. This causes the code to wait until the entire page is loaded before running
+/*
 $(function(){
 
    categories=[
@@ -34,3 +35,6 @@ $(function(){
    ]
 
 }); 
+var parser = function()
+{}
+*/

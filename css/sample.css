@@ -24,7 +24,16 @@ p.questionText {
 	margin-top: 20px;
 	margin-left: 100px;
 }
-					
+
+.answers{
+    list-style-type: none;
+    }
+
+
+.categories{
+    list-style-type: none;
+
+}
 
 .button {
   border-radius: 4px;
