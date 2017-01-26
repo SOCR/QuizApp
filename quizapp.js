@@ -10,97 +10,131 @@ var trueAnswer;
 var currentCategoryID;
 
 $(function(){
+    /*
+     {
+     categories = [
+     {
+     name: "Statistics",
+     questions: [
+     {
+     questionText: "sample question1",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question2",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question3",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question4",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     }
+     ]
+     },
+     {
+     name: "Math",
+     questions: [
+     {
+     questionText: "What is 1+1",
+     answers: ["2", "1", "11", "100"]
+     },
+     {
+     questionText: "what is 7*5",
+     answers: ["35", "42", "21", "12"]
+     }
+     ]
+     },
+     {
+     name: "Machine Learning",
+     questions: [
+     {
+     questionText: "sample question1",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question2",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question3",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question4",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     }
+     ]
+     },
+     {
+     name: "Biology",
+     questions: [
+     {
+     questionText: "sample question1",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question2",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question3",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question4",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     }
+     ]
+     }
+     ];
+     }
+     */
 
-    var categories=[
+    categories = [{
+        "name": "Statistics",
+        "questions": [{
+            "questionText": "sample question1",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+
+        }, {
+            "questionText": "sample question1",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "sample question1",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "sample question1",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }]
+
+    },
+
         {
-            name: "Statistics",
-            questions:[
-                {
-                    questionText:"sample question1",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
+            "name": "ML",
+            "questions": [{
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
 
-                },
-                {
-                    questionText:"sample question2",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question3",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question4",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                }
-            ]
-
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
         },
-        {
-            name: "Math",
-            questions:[
-                {
-                    questionText:"What is 1+1",
-                    answers:["2","1","11","100"]
-                },
-                {
-                    questionText:"what is 7*5",
-                    answers:["35","42","21","12"]
-                }
-            ]
-        },
-
-
-        {
-            name: "Machine Learning",
-            questions:[
-                {
-                    questionText:"sample question1",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-
-                },
-                {
-                    questionText:"sample question2",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question3",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question4",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                }
-            ]
-
-        },
-
-
-        {
-            name: "Biology",
-            questions:[
-                {
-                    questionText:"sample question1",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question2",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question3",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                },
-                {
-                    questionText:"sample question4",
-                    answers:["correctanswer","wronganswer1","wronganswer2","wronganswer3"]
-                }
-            ]
-        }
-
-
-
 
     ];
+
+
+
+
 
 
     //id for the start menu and category menu
@@ -115,25 +149,17 @@ $(function(){
 
     });
 
-
-
-    //function to get a random question given category id
-
-
     $(".submitButton").click(function () {
-        if($("input:radio[name='answerBTN']").is(":checked")) {
-            //write your code
-            questionsSeen++;
-            var answer = $("input:radio[name=answerBTN]:checked").val();
-            if (answer == trueAnswer) {
-                console.log("Correct Answer");
-                score++;
-            }
-            var answersList = $(document).find(".UI > .answers");
-            $(answersList).empty();
-
-            $(categoryMenu).modal("show");
+        questionsSeen++;
+        var answer =  $("input:radio[name=answerBTN]:checked").val();
+        if( answer == trueAnswer){
+            console.log("Correct Answer");
+            score++;
         }
+        var answersList =  $(document).find(".UI > .answers");
+        $(answersList).empty();
+        $(categoryMenu).modal('show');
+
     });
 
 
@@ -150,9 +176,9 @@ function displayCategory(categoryMenu, categoryList) {
     $(categoryMenu).modal('show');
 
 
-    for (var i = 0; i < categories.length; i++) {
+    for (i = 0; i < categories.length; i++) {
         // choice = categories[categoryID].questions[currentQuestion].answers[i];
-        var choice = categories[i].name;
+        choice = categories[i].name;
         $('<li><input type="radio" value=' + i + ' name="categoryBTN" />' + choice + '</li>').appendTo(categoryList);
     }
 }
@@ -178,6 +204,11 @@ function getRandomQuestion(id){
     //set the categoryid and current question to the one were currently looking at
     categoryID =  id;
     currentQuestion = randomID;
+
+    //sanity checks
+    if(randomID < 0 || currentQuestion < 0){
+        throw error;
+    }
     //display the question
     displayQuestion(id, randomID);
 
@@ -188,6 +219,10 @@ function getRandomQuestion(id){
 
 //Give a categoryid and questionid, this function displays a question.
 function displayQuestion(categoryID, currentQuestion ) {
+    if(categoryID < 0 || currentQuestion < 0){
+        throw error;
+
+    }
 
     //select the category name and add it the category section
     var category = categories[categoryID].name;
@@ -215,7 +250,7 @@ function displayQuestion(categoryID, currentQuestion ) {
 
     //go through the possible number of answers and create a answer box
     var choice;
-    for (var i = 0; i < numChoices; i++) {
+    for (i = 0; i < numChoices; i++) {
         // choice = categories[categoryID].questions[currentQuestion].answers[i];
         choice = answersArray[i];
         $('<li><input type="radio" value=' + i + ' name="answerBTN" />' + choice + '</li>').appendTo(answersList);
@@ -242,7 +277,6 @@ function shuffle(array, answerIndex) {
             correctAnswerSeen = true;
         }
 
-
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
@@ -257,14 +291,20 @@ function shuffle(array, answerIndex) {
 function displayScore(score, questionsSeen) {
     var scoreboard = document.getElementById('scoreboard');
     $(scoreboard).modal("show");
-
+    var percentage = document.getElementsByClassName("score");
     var scoreHead = document.getElementsByClassName("scoreHeader");
     //Throw error if category has no name
-    $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
 
-    var percentage = document.getElementsByClassName("score");
-    var finalScore = (score/questionsSeen)  * 100 ;
-    $(percentage).text("For a final score of " + finalScore);
+    if(questionsSeen == 0){
+        $(percentage).text("Now Questions Answered");
+    }
+
+    else{
+        $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
+        var finalScore = (score/questionsSeen)  * 100 ;
+        $(percentage).text("For a final score of " + finalScore);
+    }
+
 
 
 }
