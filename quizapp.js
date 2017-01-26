@@ -132,7 +132,7 @@ $(function(){
             var answersList = $(document).find(".UI > .answers");
             $(answersList).empty();
 
-            $(categoryMenu).modal('show');
+            $(categoryMenu).modal("show");
         }
     });
 
