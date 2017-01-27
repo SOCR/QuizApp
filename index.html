@@ -263,7 +263,7 @@
 
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+								<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal">Start</button>
 							</div>
 						</div>
 
@@ -276,15 +276,27 @@
 
 
 
+				<!-- Modal -->
+				<div class="modal fade" id="scoreboard" role="dialog">
+					<div class="modal-dialog modal-lg">
 
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Final Score</h4>
+							</div>
+							<div class="modal-body">
+								<p class = "scoreHeader "> </p>
+								<p class = "score"> </p>
 
-				<div class="UI">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
 
-					<h5 class="score">Score: </h5>
-					<h6 class ="category"> </h6>
-					<p class="questionText">Question: </p>
-					<ul class="answers"></ul>
-					<button onclick="submitButton">Submit Answer</button>
+					</div>
 				</div>
 
 
@@ -292,7 +304,24 @@
 
 
 
-               <!-- End Body HTML Code -->
+
+				<div class="UI container-fluid">
+
+					<h5 class="score">Score: </h5>
+					<h5 class ="category"> </h5>
+					<p class="questionText"></p>
+					<ul class="answers"></ul>
+					<button input="submitButton" class = "submitButton btn-primary">Next Question</button>
+					<button input = "endQuiz" class = "endQuiz btn-success" > End Quiz</button>
+				</div>
+
+
+
+
+
+
+
+				<!-- End Body HTML Code -->
         
     
 				<!--/row-->
