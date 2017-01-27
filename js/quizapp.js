@@ -1,6 +1,3 @@
-/**
- * Created by jakeclose on 1/16/17.
- */
 
 var currentQuestion;
 var categoryID;
@@ -11,6 +8,7 @@ var currentCategoryID;
 
 $(function(){
     /*
+
     {
         categories = [
             {
@@ -148,7 +146,6 @@ $(function(){
 
 
 
-
     //id for the start menu and category menu
     var startMenu = document.getElementById('myModal');
     var categoryMenu = document.getElementById('categoryPicker');
@@ -164,7 +161,7 @@ $(function(){
     $(".submitButton").click(function () {
         questionsSeen++;
         var answer =  $("input:radio[name=answerBTN]:checked").val();
-        var sc = document.getElementsByClassName("score");
+        var sc = document.getElementsByClassName("score")
         if( answer == trueAnswer){
             console.log("Correct Answer");
             score++;
@@ -323,6 +320,31 @@ function displayScore(score, questionsSeen) {
 
 }
 
+    }
 
+    return array;
+}
+
+
+function displayScore(score, questionsSeen) {
+    var scoreboard = document.getElementById('scoreboard');
+    $(scoreboard).modal("show");
+    var percentage = document.getElementsByClassName("score");
+    var scoreHead = document.getElementsByClassName("scoreHeader");
+    //Throw error if category has no name
+
+    if(questionsSeen == 0){
+        $(percentage).text("Now Questions Answered");
+    }
+
+    else{
+        $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
+        var finalScore = (score/questionsSeen)  * 100 ;
+        $(percentage).text("For a final score of " + finalScore);
+    }
+
+
+
+}
 
 
