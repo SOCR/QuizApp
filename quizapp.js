@@ -11,136 +11,124 @@ var currentCategoryID;
 
 $(function(){
     /*
-    {
-        categories = [
-            {
-                name: "Statistics",
-                questions: [
-                    {
-                        questionText: "sample question1",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     {
+     categories = [
+     {
+     name: "Statistics",
+     questions: [
+     {
+     questionText: "sample question1",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question2",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question3",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question4",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     }
+     ]
+     },
+     {
+     name: "Math",
+     questions: [
+     {
+     questionText: "What is 1+1",
+     answers: ["2", "1", "11", "100"]
+     },
+     {
+     questionText: "what is 7*5",
+     answers: ["35", "42", "21", "12"]
+     }
+     ]
+     },
+     {
+     name: "Machine Learning",
+     questions: [
+     {
+     questionText: "sample question1",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question2",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question3",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question4",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     }
+     ]
+     },
+     {
+     name: "Biology",
+     questions: [
+     {
+     questionText: "sample question1",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question2",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question3",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     },
+     {
+     questionText: "sample question4",
+     answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+     }
+     ]
+     }
+     ];
+     }
+     */
 
-                    },
-                    {
-                        questionText: "sample question2",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question3",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question4",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    }
-                ]
-
-            },
-            {
-                name: "Math",
-                questions: [
-                    {
-                        questionText: "What is 1+1",
-                        answers: ["2", "1", "11", "100"]
-                    },
-                    {
-                        questionText: "what is 7*5",
-                        answers: ["35", "42", "21", "12"]
-                    }
-                ]
-            },
-
-
-            {
-                name: "Machine Learning",
-                questions: [
-                    {
-                        questionText: "sample question1",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-
-                    },
-                    {
-                        questionText: "sample question2",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question3",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question4",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    }
-                ]
-
-            },
-
-
-            {
-                name: "Biology",
-                questions: [
-                    {
-                        questionText: "sample question1",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question2",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question3",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question4",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    }
-                ]
-            }
-
-
-        ];
-
-    }
-
-    */
-
-         categories = [{
+    categories = [{
         "name": "Statistics",
-            "questions": [{
+        "questions": [{
             "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
 
         }, {
             "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
         }, {
             "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
         }, {
             "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
         }]
 
+    },
+
+        {
+            "name": "ML",
+            "questions": [{
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
         },
-
-             {
-                 "name": "ML",
-                 "questions": [{
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }]
-             },
 
     ];
 
@@ -159,17 +147,15 @@ $(function(){
         displayCategory(categoryMenu, categoryList);
         showCategoryQuestion(categoryMenu);
 
-   });
+    });
 
     $(".submitButton").click(function () {
         questionsSeen++;
         var answer =  $("input:radio[name=answerBTN]:checked").val();
-        var sc = document.getElementsByClassName("score");
         if( answer == trueAnswer){
             console.log("Correct Answer");
             score++;
         }
-        $(sc).text("Score: " + score + " out of " + questionsSeen);
         var answersList =  $(document).find(".UI > .answers");
         $(answersList).empty();
         $(categoryMenu).modal('show');
@@ -247,7 +233,7 @@ function displayQuestion(categoryID, currentQuestion ) {
 
     //select the question text and add it question section
     var question =   categories[categoryID].questions[currentQuestion].questionText;
-   // console.log(question);
+    // console.log(question);
     var questionClass = $(document).find(".UI > .questionText");
     $(questionClass).text(question);
 
@@ -265,7 +251,7 @@ function displayQuestion(categoryID, currentQuestion ) {
     //go through the possible number of answers and create a answer box
     var choice;
     for (i = 0; i < numChoices; i++) {
-       // choice = categories[categoryID].questions[currentQuestion].answers[i];
+        // choice = categories[categoryID].questions[currentQuestion].answers[i];
         choice = answersArray[i];
         $('<li><input type="radio" value=' + i + ' name="answerBTN" />' + choice + '</li>').appendTo(answersList);
     }
@@ -314,7 +300,7 @@ function displayScore(score, questionsSeen) {
     }
 
     else{
-    $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
+        $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
         var finalScore = (score/questionsSeen)  * 100 ;
         $(percentage).text("For a final score of " + finalScore);
     }
@@ -322,7 +308,3 @@ function displayScore(score, questionsSeen) {
 
 
 }
-
-
-
-
