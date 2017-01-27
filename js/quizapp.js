@@ -320,31 +320,3 @@ function displayScore(score, questionsSeen) {
 
 }
 
-    }
-
-    return array;
-}
-
-
-function displayScore(score, questionsSeen) {
-    var scoreboard = document.getElementById('scoreboard');
-    $(scoreboard).modal("show");
-    var percentage = document.getElementsByClassName("score");
-    var scoreHead = document.getElementsByClassName("scoreHeader");
-    //Throw error if category has no name
-
-    if(questionsSeen == 0){
-        $(percentage).text("Now Questions Answered");
-    }
-
-    else{
-        $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
-        var finalScore = (score/questionsSeen)  * 100 ;
-        $(percentage).text("For a final score of " + finalScore);
-    }
-
-
-
-}
-
-
