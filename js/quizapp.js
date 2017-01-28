@@ -103,17 +103,18 @@ $(function(){
 
     */
 
+
          categories = [{
         "name": "Statistics",
             "questions": [{
-            "questionText": "sample question1",
+            "questionText": "What is Probability",
                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
 
         }, {
-            "questionText": "sample question1",
+            "questionText": "What is chance",
                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
         }, {
-            "questionText": "sample question1",
+            "questionText": "What is the meaning?",
                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
         }, {
             "questionText": "sample question1",
@@ -152,23 +153,36 @@ $(function(){
     var categoryList = document.getElementsByClassName('categories');
 
 
+
     $(startMenu).modal('show').on("hidden", function () {
         displayCategory(categoryMenu, categoryList);
         showCategoryQuestion(categoryMenu);
 
    });
 
+
+
+
+
+
     $(".submitButton").click(function () {
         questionsSeen++;
         var answer =  $("input:radio[name=answerBTN]:checked").val();
-        var sc = document.getElementsByClassName("score")
+        var sc = document.getElementsByClassName("score");
         if( answer == trueAnswer){
-            console.log("Correct Answer");
             score++;
         }
         $(sc).text("Score: " + score + " out of " + questionsSeen);
         var answersList =  $(document).find(".UI > .answers");
         $(answersList).empty();
+        getRandomQuestion(currentCategoryID);
+
+
+    });
+
+
+    $(".newCategory").click(function () {
+
         $(categoryMenu).modal('show');
 
     });
@@ -208,6 +222,8 @@ function  showCategoryQuestion(categoryMenu) {
 
 //Given a cateogory ID, this function displays a random question from that category
 function getRandomQuestion(id){
+    var answersList =  $(document).find(".UI > .answers");
+    $(answersList).empty();
     // determine the number of questions in the current category
     var numQuestions = categories[id].questions.length;
     // create a random question id that is smaller than the number of questions
@@ -230,15 +246,25 @@ function getRandomQuestion(id){
 
 //Give a categoryid and questionid, this function displays a question.
 function displayQuestion(categoryID, currentQuestion ) {
+
     if(categoryID < 0 || currentQuestion < 0){
         throw error;
 
     }
 
+
+    var num_category_questions =  $(document).find(".UI > .numCategoryQuestions");
+    $(num_category_questions).text(categories[categoryID].questions.length + "/"  + categories[categoryID].questions.length +  " Questions Remaining ");
+
+
+
+
     //select the category name and add it the category section
     var category = categories[categoryID].name;
     var categoryClass = $(document).find(".UI > .category");
     //Throw error if category has no name
+
+
 
     $(categoryClass).text(category);
 
@@ -259,13 +285,19 @@ function displayQuestion(categoryID, currentQuestion ) {
     answersArray = shuffle(answersArray, answerIndex);
 
 
+
     //go through the possible number of answers and create a answer box
     var choice;
     for (i = 0; i < numChoices; i++) {
        // choice = categories[categoryID].questions[currentQuestion].answers[i];
         choice = answersArray[i];
-        $('<li><input type="radio" value=' + i + ' name="answerBTN" />' + choice + '</li>').appendTo(answersList);
+       // $('<li><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" />' + choice + '</li> ').appendTo(answersList);
+
+        $('<li><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
+
     }
+
+
 
 
 
@@ -315,6 +347,17 @@ function displayScore(score, questionsSeen) {
         var finalScore = (score/questionsSeen)  * 100 ;
         $(percentage).text("For a final score of " + finalScore);
     }
+
+
+    $(scoreboard).on("hidden", function () {
+
+
+        questionsSeen = 0;
+        score = 0;
+
+    });
+
+
 
 
 
