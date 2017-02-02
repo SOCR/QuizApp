@@ -30,6 +30,12 @@ $(document).ready(function(){
         
     });
 
+    $(".submitButton").click(function(){
+
+		updateButton(isSelected);
+        
+    });
+
 
 
 
@@ -44,6 +50,16 @@ function updateButton(isSelected) {
 		document.getElementById(".submitButton").disabled = true;
 	}
 	
+}
+
+function getIsSelected() {
+	return isSelected;
+}
+
+function reset() {
+	isSelected = false;
+	document.getElementById(".submitButton").disabled = true;
+
 }
 
 
