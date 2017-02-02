@@ -39,6 +39,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/sample.js"></script>
 	<script src="js/quizapp.js"></script>
+	<script src="js/timer.js"></script>
 </head>
 
 <body>
@@ -217,8 +218,8 @@
 				<div class="hero-unit">
 					<h1>SOCR Quiz App</h1>
 				</div>
-              	
-                <p>App goes here</p>
+
+				<div class="tpos">Remaining time is <span id="time"></span> minutes!</div>
                <!-- Begin Body HTML Code -->
 
 				<!-- Start Modal -->
@@ -259,11 +260,11 @@
 							</div>
 							<div class="modal-body">
 								<p>Select one</p>
-								<li class = "categories"> </li>
+								<ul class = "categories"></ul>
 
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+								<button type="button" id="buttont" class="btn btn-primary" data-dismiss="modal">Start</button>
 							</div>
 						</div>
 
@@ -288,7 +289,9 @@
 				</div>
 
 
+				<!-- Timer part -->
 
+				<!-- End of Timer part -->
 
 
 
