@@ -138,6 +138,10 @@ $(function(){
     });
 
 
+    $(".answers").click(function () {
+
+    });
+
 
     $( ".endQuiz" ).click(function () {
         displayScore(score, questionsSeen);
