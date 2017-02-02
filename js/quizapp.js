@@ -6,125 +6,30 @@ var questionsSeen = 0;
 var trueAnswer;
 var currentCategoryID;
 
+
 $(function(){
-    /*
-
-    {
-        categories = [
-            {
-                name: "Statistics",
-                questions: [
-                    {
-                        questionText: "sample question1",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-
-                    },
-                    {
-                        questionText: "sample question2",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question3",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question4",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    }
-                ]
-
-            },
-            {
-                name: "Math",
-                questions: [
-                    {
-                        questionText: "What is 1+1",
-                        answers: ["2", "1", "11", "100"]
-                    },
-                    {
-                        questionText: "what is 7*5",
-                        answers: ["35", "42", "21", "12"]
-                    }
-                ]
-            },
-
-
-            {
-                name: "Machine Learning",
-                questions: [
-                    {
-                        questionText: "sample question1",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-
-                    },
-                    {
-                        questionText: "sample question2",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question3",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question4",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    }
-                ]
-
-            },
-
-
-            {
-                name: "Biology",
-                questions: [
-                    {
-                        questionText: "sample question1",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question2",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question3",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    },
-                    {
-                        questionText: "sample question4",
-                        answers: ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                    }
-                ]
-            }
-
-
-        ];
-
-    }
-
-    */
 
 
          categories = [{
-        "name": "Statistics",
-            "questions": [{
-            "questionText": "What is Probability",
+             "name": "Statistics",
+             "questions": [{
+                 "questionText": "What is Probability",
+                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+             }, {
+                 "questionText": "What is chance",
+                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+             }, {
+                 "questionText": "What is the meaning?",
                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+             }, {
+                 "questionText": "sample question1",
+                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+             }]
 
-        }, {
-            "questionText": "What is chance",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }, {
-            "questionText": "What is the meaning?",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }, {
-            "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }]
-
-        },
+         },
 
              {
-                 "name": "ML",
+                 "name": "Machine Learning",
                  "questions": [{
                      "questionText": "sample question1",
                      "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
@@ -139,6 +44,42 @@ $(function(){
                      "questionText": "sample question1",
                      "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
                  }]
+             },
+
+             {
+                 "name": "Math",
+                 "questions": [{
+                     "questionText": "What is 1 + 1",
+                     "answers": ["2", "3", "10", "11"]
+                 }, {
+                     "questionText": "What 7 x 7 ",
+                     "answers": ["49", "3", "21", "77"]
+                 }, {
+                     "questionText": "What is 100 - 9?",
+                     "answers": ["81", "91", "70", "60"]
+                 }, {
+                     "questionText": "sample question1",
+                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+                 }]
+
+             },
+
+             {
+                 "name": "Biology",
+                 "questions": [{
+                     "questionText": "What is Probability",
+                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+                 }, {
+                     "questionText": "What is chance",
+                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+                 }, {
+                     "questionText": "What is the meaning?",
+                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+                 }, {
+                     "questionText": "sample question1",
+                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+                 }]
+
              },
 
     ];
@@ -169,12 +110,21 @@ $(function(){
         questionsSeen++;
         var answer =  $("input:radio[name=answerBTN]:checked").val();
         var sc = document.getElementsByClassName("score");
+        console.log(trueAnswer);
         if( answer == trueAnswer){
+            console.log("correct answer");
             score++;
         }
+
+        console.log("deleting question");
+        categories[categoryID].questions.splice(currentQuestion, 1);
+
         $(sc).text("Score: " + score + " out of " + questionsSeen);
         var answersList =  $(document).find(".UI > .answers");
         $(answersList).empty();
+
+
+
         getRandomQuestion(currentCategoryID);
 
 
@@ -187,6 +137,10 @@ $(function(){
 
     });
 
+
+    $(".answers").click(function () {
+
+    });
 
 
     $( ".endQuiz" ).click(function () {
@@ -226,6 +180,13 @@ function getRandomQuestion(id){
     $(answersList).empty();
     // determine the number of questions in the current category
     var numQuestions = categories[id].questions.length;
+    //if no questions left
+    if(numQuestions == 0){
+        //display the category menu
+        var categoryMenu = document.getElementById('categoryPicker');
+        $(categoryMenu).modal('show');
+    }
+
     // create a random question id that is smaller than the number of questions
     var randomID = Math.floor((Math.random() * (numQuestions)));
     //set the categoryid and current question to the one were currently looking at
@@ -339,7 +300,7 @@ function displayScore(score, questionsSeen) {
     //Throw error if category has no name
 
     if(questionsSeen == 0){
-        $(percentage).text("Now Questions Answered");
+        $(percentage).text("No Questions Answered");
     }
 
     else{
@@ -349,13 +310,7 @@ function displayScore(score, questionsSeen) {
     }
 
 
-    $(scoreboard).on("hidden", function () {
 
-
-        questionsSeen = 0;
-        score = 0;
-
-    });
 
 
 
