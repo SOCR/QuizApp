@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h4> Quiz application </h4>
+    </header>
+    <div class="container">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Start</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"> Category </h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="answers">
+                            <input type="radio" name="cat" value="math" id="c1"><label for="c1">Math</label><br/>
+                            <input type="radio" name="cat" value="physics" id="c2"><label for="c2">Physics</label><br/>
+                            <input type="radio" name="cat" value="chemistry" id="c3"><label for="c3">Computer Science</label><br/>
+                            <input type="radio" name="cat" value="computer science" id="c4"><label for="c4"> Astronomy</label><br/>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

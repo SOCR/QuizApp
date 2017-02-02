@@ -22,7 +22,7 @@
 		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
 		<style type="text/css">body {position: static !important; top:0px !important;}</style>
 		
-  	 	<link href="./js/bootstrap-responsive.css" rel="stylesheet">
+  	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
 
 	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -31,9 +31,20 @@
     	
     	<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
     	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
+
+		<!-- Import JS files -->
+		<script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap-modal.js"></script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/sample.js"></script>
+	<script src="js/quizapp.js"></script>
 </head>
 
 <body>
+
+
+
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid"> 
@@ -210,9 +221,107 @@
                 <p>App goes here</p>
                <!-- Begin Body HTML Code -->
 
+				<!-- Start Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Instruction</h4>
+							</div>
+							<div class="modal-body">
+									<p>The SOCR Quiz App is a web-based application. It is designed to test the user's knowledge of bioinformatics and machine learning concepts using a multiple-choice style quiz.</p>
+									<p>Questions will be divided into categories, and a simple points system will be used to keep score.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" id = "start-btn" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
 
 
-               <!-- End Body HTML Code -->
+
+				<!-- Category Picking Model -->
+
+				<!-- Modal -->
+				<div class="modal fade" id="categoryPicker" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Choose A Category</h4>
+							</div>
+							<div class="modal-body">
+								<p>Select one</p>
+								<li class = "categories"> </li>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<!-- Category Picking Model -->
+
+
+
+				<!-- Modal -->
+				<div class="modal fade" id="scoreboard" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Final Score</h4>
+							</div>
+							<div class="modal-body">
+								<p class = "scoreHeader "> </p>
+								<p class = "score"> </p>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+
+
+
+				<div class="UI container-fluid">
+
+					<h5 class="score">Score: </h5>
+					<h5 class ="category"> </h5>
+					<p class="questionText"></p>
+					<ul class="answers"></ul>
+					<button input="submitButton" class = "submitButton btn-primary">Next Question</button>
+					<button input = "endQuiz" class = "endQuiz btn-success" > End Quiz</button>
+				</div>
+
+
+
+
+
+
+
+				<!-- End Body HTML Code -->
         
     
 				<!--/row-->
