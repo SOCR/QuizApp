@@ -150,6 +150,7 @@ $(function(){
     });
 
     $(".submitButton").click(function () {
+    if (getIsSelected()) {
         questionsSeen++;
         var answer =  $("input:radio[name=answerBTN]:checked").val();
         if( answer == trueAnswer){
@@ -159,7 +160,7 @@ $(function(){
         var answersList =  $(document).find(".UI > .answers");
         $(answersList).empty();
         $(categoryMenu).modal('show');
-
+	}
     });
 
 
