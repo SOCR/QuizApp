@@ -11,6 +11,19 @@
 	border-radius: 8px;
 	text-align: center;
 }
+
+.numCategoryQuestions{
+    text-align: right;
+}
+
+
+
+
+.category{
+    font-size: 25px;
+
+}
+
 .score {
 	font-size: 15px;
 	text-align: right;	
@@ -18,13 +31,61 @@
 	margin-top: 15px;
 }
 
+
 p.questionText {
 	text-align: left;
 	font-size: 20px;
 	margin-top: 20px;
 	margin-left: 100px;
 }
-					
+
+.categories{
+    columns:2;
+}
+
+.categories li{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.answers{
+    list-style-type: none;
+    background-color: lightgrey;
+    columns:2;
+    padding: 15px;
+
+    }
+
+.answers li {
+    background-color: cornflowerblue;
+    padding: 10px;
+    border: black;
+
+}
+
+.answers li input{
+    #visibility: hidden;
+
+}
+
+
+
+
+
+
+.answers li:hover {
+    background-color: cadetblue;
+}
+
+
+
+
+
+.categories{
+    list-style-type: none;
+
+}
 
 .button {
   border-radius: 4px;
