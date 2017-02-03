@@ -59,13 +59,14 @@ p.questionText {
 
 .answers li {
     background-color: cornflowerblue;
+
     padding: 10px;
     border: black;
 
 }
 
 .answers li input{
-    #visibility: hidden;
+    visibility: hidden;
 
 }
 

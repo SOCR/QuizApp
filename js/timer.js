@@ -26,11 +26,7 @@ function startTimer(duration, display) {
     };
     // we don't want to wait a full second before the timer starts
     timer();
+    //1000
     setInterval(timer, 1000);
 }
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
