@@ -139,6 +139,7 @@ $(function(){
 
 
     $(".answers").click(function () {
+        $(".answerQuestion").css("background-color", "black")
 
     });
 
@@ -254,7 +255,7 @@ function displayQuestion(categoryID, currentQuestion ) {
         choice = answersArray[i];
        // $('<li><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" />' + choice + '</li> ').appendTo(answersList);
 
-        $('<li><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
+        $('<li id = "answer" ><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
 
     }
 
