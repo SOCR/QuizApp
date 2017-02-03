@@ -127,3 +127,34 @@ p.questionText {
   opacity: 1;
   right: 0;
 }
+
+#time{
+    font-family: sans-serif;
+    color: #000000;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+#time > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#time div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #9b9b9b;
+    display: inline-block;
+}
+
+.tpos{
+    color: #396;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 30px 0px 20px;
+}
