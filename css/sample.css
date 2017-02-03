@@ -11,12 +11,26 @@
 	border-radius: 8px;
 	text-align: center;
 }
+
+.numCategoryQuestions{
+    text-align: right;
+}
+
+
+
+
+.category{
+    font-size: 25px;
+
+}
+
 .score {
 	font-size: 15px;
 	text-align: right;	
 	margin-right: 200px;
 	margin-top: 15px;
 }
+
 
 p.questionText {
 	text-align: left;
@@ -25,9 +39,47 @@ p.questionText {
 	margin-left: 100px;
 }
 
+.categories{
+    columns:2;
+}
+
+.categories li{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
 .answers{
     list-style-type: none;
+    background-color: lightgrey;
+    columns:2;
+    padding: 15px;
+
     }
+
+.answers li {
+    background-color: cornflowerblue;
+    padding: 10px;
+    border: black;
+
+}
+
+.answers li input{
+    #visibility: hidden;
+
+}
+
+
+
+
+
+
+.answers li:hover {
+    background-color: cadetblue;
+}
+
+
+
 
 
 .categories{
@@ -74,4 +126,35 @@ p.questionText {
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+#time{
+    font-family: sans-serif;
+    color: #000000;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+#time > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#time div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #9b9b9b;
+    display: inline-block;
+}
+
+.tpos{
+    color: #396;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 30px 0px 20px;
 }
