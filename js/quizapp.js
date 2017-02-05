@@ -80,7 +80,7 @@ $(function(){
                      "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
                  }]
 
-             },
+             }
 
     ];
 
@@ -96,6 +96,9 @@ $(function(){
 
 
     $(startMenu).modal('show').on("hidden", function () {
+        var fiveMinutes = 60 * 5,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
         displayCategory(categoryMenu, categoryList);
         showCategoryQuestion(categoryMenu);
 
@@ -108,22 +111,22 @@ $(function(){
 
     $(".submitButton").click(function () {
         questionsSeen++;
-        var answer =  $("input:radio[name=answerBTN]:checked").val();
-        var sc = document.getElementsByClassName("score");
-        console.log(trueAnswer);
+        //var answer =  $("input:radio[name=answerBTN]:checked").val();
+
+        var answer = $("li.active").val();
+        console.log(answer);
+
+        var sc = $(".score");
+
         if( answer == trueAnswer){
-            console.log("correct answer");
             score++;
         }
 
-        console.log("deleting question");
         categories[categoryID].questions.splice(currentQuestion, 1);
 
         $(sc).text("Score: " + score + " out of " + questionsSeen);
         var answersList =  $(document).find(".UI > .answers");
         $(answersList).empty();
-
-
 
         getRandomQuestion(currentCategoryID);
 
@@ -136,6 +139,27 @@ $(function(){
         $(categoryMenu).modal('show');
 
     });
+
+
+    $(".answers").on("click", "li.theAnswers", function(){
+        console.log("clicked");
+       // $(".answers li:eq(2)").css('background', 'black');
+        $(this).css("background-color", "#1e6609");
+
+        if (!$(this).hasClass("active")) {
+            // Remove the class from anything that is active
+
+            $("li.active").css("background-color", "cornflowerblue");
+            $("li.active").removeClass("active");
+            // And make this active
+            $(this).addClass("active");
+        }
+
+    });
+
+
+
+
 
 
 
@@ -211,6 +235,10 @@ function displayQuestion(categoryID, currentQuestion ) {
 
 
     var num_category_questions =  $(document).find(".UI > .numCategoryQuestions");
+
+    var newCategory = true;
+    var totalQuestionInCategory;
+
     $(num_category_questions).text(categories[categoryID].questions.length + "/"  + categories[categoryID].questions.length +  " Questions Remaining ");
 
 
@@ -250,7 +278,7 @@ function displayQuestion(categoryID, currentQuestion ) {
         choice = answersArray[i];
        // $('<li><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" />' + choice + '</li> ').appendTo(answersList);
 
-        $('<li><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
+        $('<li id = "numAnswer' + i + ' " class = "theAnswers" value ='+i +' ><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
 
     }
 
