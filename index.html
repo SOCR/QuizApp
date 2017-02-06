@@ -33,8 +33,9 @@
     	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
 
 		<!-- Import JS files -->
+		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<script src="./js/jquery.js"></script>
-  <script src="./js/bootstrap-modal.js"></script>
+	<script src="./js/bootstrap-modal.js"></script>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/sample.js"></script>
@@ -219,6 +220,8 @@
 				</div>
                <!-- Begin Body HTML Code -->
 
+				<section id="timerzone"></section>
+
 				<!-- Start Modal -->
 				<div class="modal fade" id="myModal" role="dialog">
 					<div class="modal-dialog modal-lg">
@@ -261,7 +264,7 @@
 
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal">Start</button>
+								<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal" id="timeStart">Start</button>
 							</div>
 						</div>
 
@@ -321,6 +324,9 @@
 
 
 
+
+
+
 				<!-- End Body HTML Code -->
         
     
@@ -359,7 +365,8 @@
 	<script src="./js/bootstrap-collapse.js"></script>
 	<script src="./js/bootstrap-carousel.js"></script>
 	<script src="./js/bootstrap-typeahead.js"></script>
-    <!-- End Import Statements for JS files-->
+	<script src="js/timer2.js"></script>
+	<!-- End Import Statements for JS files-->
 	
 
 	
