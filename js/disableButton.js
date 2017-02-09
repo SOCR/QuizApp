@@ -32,12 +32,16 @@ $(document).ready(function(){
     });
 });
 
-/*
+
 
 $("#start-button").click(function() {
-	if ()
+	if (isSelected) {
+        var window = $("#categoryPicker");
+        window.modal('toggle');
+        console.log("printthis");
+    }
 });
-*/
+
 
 
 
