@@ -8,8 +8,6 @@ var currentCategoryID;
 
 
 $(function(){
-
-
          categories = [{
              "name": "Statistics",
              "questions": [{
@@ -84,17 +82,13 @@ $(function(){
 
     ];
 
-
-
-
-
     //id for the start menu and category menu
     var startMenu = document.getElementById('myModal');
     var categoryMenu = document.getElementById('categoryPicker');
     var categoryList = document.getElementsByClassName('categories');
 
 
-
+///////////////////////////////////////////////////////////////////////////////////
     $(startMenu).modal('show').on("hidden", function () {
         var fiveMinutes = 60 * 5,
             display = document.querySelector('#time');
@@ -103,24 +97,40 @@ $(function(){
         showCategoryQuestion(categoryMenu);
 
    });
+//////////////////////////////////////////////////////////////////////////////////
+    $(".check").click(function () {
+        var clicked = $("li.active").val();
+        // when it is wrong, it will marked as red
+        $('.answers > li').filter(function (index){ return (index == clicked) && (index != trueAnswer); }).css({"background-color": "red"});
+        // mark the true one as green
+        $('.answers > li').filter(function (index){ return index == trueAnswer; }).css({"background-color": "green"});
+
+        document.getElementById("numAnswer0 ").disabled = true;
+        document.getElementById("numAnswer1 ").disabled = true;
+        document.getElementById("numAnswer2 ").disabled = true;
+        document.getElementById("numAnswer3 ").disabled = true;
 
 
 
+    });
 
 
 
+//////////////////////////////////////////////////////////////////////////////////
     $(".submitButton").click(function () {
         questionsSeen++;
-        //var answer =  $("input:radio[name=answerBTN]:checked").val();
-
         var answer = $("li.active").val();
+        //var right = 0;
         console.log(answer);
 
         var sc = $(".score");
 
-        if( answer == trueAnswer){
+        if(answer == trueAnswer){
             score++;
+          //  right = 1;
         }
+
+        //highlight_feedbck(right, answer, trueAnswer, categoryID, currentQuestion);
 
         categories[categoryID].questions.splice(currentQuestion, 1);
 
@@ -132,7 +142,7 @@ $(function(){
 
 
     });
-
+//////////////////////////////////////////////////////////////////////////////////
 
     $(".newCategory").click(function () {
 
@@ -140,11 +150,11 @@ $(function(){
 
     });
 
-
+//////////////////////////////////////////////////////////////////////////////////
     $(".answers").on("click", "li.theAnswers", function(){
         console.log("clicked");
        // $(".answers li:eq(2)").css('background', 'black');
-        $(this).css("background-color", "#1e6609");
+        $(this).css("background-color", "purple");
 
         if (!$(this).hasClass("active")) {
             // Remove the class from anything that is active
@@ -157,12 +167,7 @@ $(function(){
 
     });
 
-
-
-
-
-
-
+//////////////////////////////////////////////////////////////////////////////////
     $( ".endQuiz" ).click(function () {
         displayScore(score, questionsSeen);
     });
@@ -170,7 +175,7 @@ $(function(){
 });
 
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////
 function displayCategory(categoryMenu, categoryList) {
     $(categoryMenu).modal('show');
 
@@ -182,7 +187,7 @@ function displayCategory(categoryMenu, categoryList) {
     }
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////
 function  showCategoryQuestion(categoryMenu) {
     $(categoryMenu).on("hidden", function () {
         currentCategoryID = parseInt($("input:radio[name=categoryBTN]:checked").val());
@@ -193,7 +198,7 @@ function  showCategoryQuestion(categoryMenu) {
     });
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////
 //Given a cateogory ID, this function displays a random question from that category
 function getRandomQuestion(id){
     var answersList =  $(document).find(".UI > .answers");
@@ -220,36 +225,26 @@ function getRandomQuestion(id){
     //display the question
     displayQuestion(id, randomID);
 
-
-
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////
 //Give a categoryid and questionid, this function displays a question.
 function displayQuestion(categoryID, currentQuestion ) {
 
     if(categoryID < 0 || currentQuestion < 0){
         throw error;
-
     }
 
-
     var num_category_questions =  $(document).find(".UI > .numCategoryQuestions");
-
     var newCategory = true;
     var totalQuestionInCategory;
 
     $(num_category_questions).text(categories[categoryID].questions.length + "/"  + categories[categoryID].questions.length +  " Questions Remaining ");
 
-
-
-
     //select the category name and add it the category section
     var category = categories[categoryID].name;
     var categoryClass = $(document).find(".UI > .category");
     //Throw error if category has no name
-
-
 
     $(categoryClass).text(category);
 
@@ -268,9 +263,6 @@ function displayQuestion(categoryID, currentQuestion ) {
     var answersArray = categories[categoryID].questions[currentQuestion].answers;
 
     answersArray = shuffle(answersArray, answerIndex);
-
-
-
     //go through the possible number of answers and create a answer box
     var choice;
     for (i = 0; i < numChoices; i++) {
@@ -282,13 +274,9 @@ function displayQuestion(categoryID, currentQuestion ) {
 
     }
 
-
-
-
-
 }
-
-//Fisher-Yates (aka Knuth) Shuffle.
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Fisher-Yates (aka Knuth) Shuffle. array is answer array, index is 0;
 function shuffle(array, answerIndex) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     var correctAnswerSeen = false;
@@ -315,7 +303,7 @@ function shuffle(array, answerIndex) {
     return array;
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////
 function displayScore(score, questionsSeen) {
     var scoreboard = document.getElementById('scoreboard');
     $(scoreboard).modal("show");
@@ -332,13 +320,6 @@ function displayScore(score, questionsSeen) {
         var finalScore = (score/questionsSeen)  * 100 ;
         $(percentage).text("For a final score of " + finalScore);
     }
-
-
-
-
-
-
-
 
 }
 
