@@ -13,41 +13,42 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 
 $(document).ready(function(){
-
-	var isSelected = false;
-
+    reset();
 	updateButton(isSelected);
 
-	
+	$(".categories").click(function(){
 
-	$("categoryClass").click(function(){
-
-		isSelected = document.getElementByClassName("categoryClass").checked;
+		isSelected = true;
+        updateButton(isSelected);
         
-    });
+    }());
 
-    $(".submitButton").click(function(){
+    $("#start-button").click(function(){
 
-		updateButton(isSelected);
+
         
-    });
-
-
-
-
+    }());
 });
+
+/*
+
+$("#start-button").click(function() {
+	if ()
+});
+*/
+
 
 
 function updateButton(isSelected) {
 	if (isSelected) {
-		document.getElementById(".submitButton").disabled = false;
-	}
+		$("#start-button").addClass("enabled");
+        $("#start-button").removeClass("disabled");
+    }
 	else {
-		document.getElementById(".submitButton").disabled = true;
+		$("#start-button").addClass("disabled");
+		$("#start-button").removeClass("enabled");
 	}
 	
 }
@@ -58,9 +59,11 @@ function getIsSelected() {
 
 function reset() {
 	isSelected = false;
-	document.getElementById(".submitButton").disabled = true;
 
+	// console.log(document.getElementById("start-button"));
+	// $("#start-button").disabled = true;
+    $("#start-button").removeClass("enabled");
+    $("#start-button").addClass("disabled");
 }
 
 
-</script>

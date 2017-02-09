@@ -159,6 +159,7 @@ $(function(){
    });
 
     $(".submitButton").click(function () {
+
         questionsSeen++;
         var answer =  $("input:radio[name=answerBTN]:checked").val();
         var sc = document.getElementsByClassName("score")
