@@ -61,5 +61,6 @@ function fields()
 }
 
 $("#timeStart").click(function() {
+    window.clearTimeout(interTracker);
     startTimer(300);
 });
