@@ -23,13 +23,13 @@ $(document).ready(function(){
 		isSelected = true;
         updateButton(isSelected);
         
-    }());
+    });
 
     $("#start-button").click(function(){
 
 
         
-    }());
+    });
 });
 
 /*
@@ -45,11 +45,14 @@ function updateButton(isSelected) {
 	if (isSelected) {
 		$("#start-button").addClass("enabled");
         $("#start-button").removeClass("disabled");
+        console.log("if statement");
     }
 	else {
 		$("#start-button").addClass("disabled");
 		$("#start-button").removeClass("enabled");
-	}
+        console.log("reached here");
+
+    }
 	
 }
 
@@ -60,7 +63,7 @@ function getIsSelected() {
 function reset() {
 	isSelected = false;
 
-	// console.log(document.getElementById("start-button"));
+	console.log(document.getElementById("start-button"));
 	// $("#start-button").disabled = true;
     $("#start-button").removeClass("enabled");
     $("#start-button").addClass("disabled");
