@@ -16,7 +16,7 @@
 
 $(document).ready(function(){
     reset();
-	updateButton(isSelected);
+	//updateButton(isSelected);
 
 	$(".categories").click(function(){
 
@@ -32,13 +32,24 @@ $(document).ready(function(){
     });
 });
 
+$("#question-button").click(function() {
+    //$("categories > li").checked = false;
+    resetWindow();
+});
+
+$("#category-button").click(function() {
+    //$("categories > li").checked = false;
+    resetWindow();
+});
 
 
 $("#start-button").click(function() {
 	if (isSelected) {
+        var choice = $("categories:checked");
+        choice.checked = false;
         var window = $("#categoryPicker");
         window.modal('toggle');
-        console.log("printthis");
+        console.log(choice);
     }
 });
 
@@ -73,4 +84,26 @@ function reset() {
     $("#start-button").addClass("disabled");
 }
 
+function resetWindow() {
+    categories[0].selected = false;
+    categories[1].selected = false;
+    categories[2].selected = false;
+    categories[3].selected = false;
 
+    categories[0].checked = false;
+    categories[1].checked = false;
+    categories[2].checked = false;
+    categories[3].checked = false;
+
+   /* (categories[0]).removeAttr('checked');
+    (categories[1]).removeAttr('checked');
+    (categories[2]).removeAttr('checked');
+    (categories[3]).removeAttr('checked');*/
+
+    console.log("print something");
+    console.log(categories[0]);
+    console.log(categories[1]);
+    console.log(categories[2]);
+    console.log(categories[3]);
+    reset();
+}

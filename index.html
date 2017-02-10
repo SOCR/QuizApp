@@ -260,11 +260,20 @@
 						</div>
 						<div class="modal-body">
 							<p>Select one</p>
-							<li class = "categories"> </li>
+							<li class = "categories">
+								<label for="Statistics">Statistics</label>
+								<input type="radio" name="gender" id="Statistics" value="Statistics">
+								<label for="Math">Math</label>
+								<input type="radio" name="gender" id="Math" value="Math">
+								<label for="Machine Learning">Male</label>
+								<input type="radio" name="gender" id="Machine Learning" value="Machine Learning">
+								<label for="Biology">Female</label>
+								<input type="radio" name="gender" id="Biology" value="Biology">
+							</li>
 
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal">Start</button>
+							<button id="start-button" type="button" class="btn btn-primary" name ="selectCategory">Start</button>
 						</div>
 					</div>
 
@@ -313,8 +322,8 @@
 				<p class="questionText"></p>
 				<p class = "numCategoryQuestions"> </p>
 				<ul class="answers"></ul>
-				<button input="newCategory" class = "newCategory btn-primary">New Category</button>
-				<button input="submitButton" class = "submitButton btn-primary">Next Question</button>
+				<button id="category-button" input="newCategory" class = "newCategory btn-primary">New Category</button>
+				<button id="question-button" input="submitButton" class = "submitButton btn-primary">Next Question</button>
 				<button input = "endQuiz" class = "endQuiz btn-success" > End Quiz</button>
 			</div>
 
@@ -349,6 +358,7 @@
 
 <!-- Import Statements for JS files, add new files at the end -->
 <script src="./js/jquery.js"></script>
+<script src="./js/disableButton.js"></script>
 <script src="./js/sample.js" type="text/javascript"></script>
 <script src="./js/bootstrap-transition.js"></script>
 <script src="./js/bootstrap-alert.js"></script>

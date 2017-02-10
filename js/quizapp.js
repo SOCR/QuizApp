@@ -10,77 +10,77 @@ var currentCategoryID;
 $(function(){
 
 
-         categories = [{
-             "name": "Statistics",
-             "questions": [{
-                 "questionText": "What is Probability",
-                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-             }, {
-                 "questionText": "What is chance",
-                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-             }, {
-                 "questionText": "What is the meaning?",
+    categories = [{
+        "name": "Statistics",
+        "questions": [{
+            "questionText": "What is Probability",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "What is chance",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "What is the meaning?",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "sample question1",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }]
+
+    },
+
+        {
+            "name": "Machine Learning",
+            "questions": [{
+                "questionText": "sample question1",
                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-             }, {
-                 "questionText": "sample question1",
-                 "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-             }]
 
-         },
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
+        },
 
-             {
-                 "name": "Machine Learning",
-                 "questions": [{
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        {
+            "name": "Math",
+            "questions": [{
+                "questionText": "What is 1 + 1",
+                "answers": ["2", "3", "10", "11"]
+            }, {
+                "questionText": "What 7 x 7 ",
+                "answers": ["49", "3", "21", "77"]
+            }, {
+                "questionText": "What is 100 - 9?",
+                "answers": ["81", "91", "70", "60"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
 
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }]
-             },
+        },
 
-             {
-                 "name": "Math",
-                 "questions": [{
-                     "questionText": "What is 1 + 1",
-                     "answers": ["2", "3", "10", "11"]
-                 }, {
-                     "questionText": "What 7 x 7 ",
-                     "answers": ["49", "3", "21", "77"]
-                 }, {
-                     "questionText": "What is 100 - 9?",
-                     "answers": ["81", "91", "70", "60"]
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }]
+        {
+            "name": "Biology",
+            "questions": [{
+                "questionText": "What is Probability",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "What is chance",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "What is the meaning?",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
 
-             },
-
-             {
-                 "name": "Biology",
-                 "questions": [{
-                     "questionText": "What is Probability",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "What is chance",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "What is the meaning?",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }, {
-                     "questionText": "sample question1",
-                     "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-                 }]
-
-             }
+        }
 
     ];
 
@@ -102,7 +102,7 @@ $(function(){
         displayCategory(categoryMenu, categoryList);
         showCategoryQuestion(categoryMenu);
 
-   });
+    });
 
 
 
@@ -110,7 +110,6 @@ $(function(){
 
 
     $(".submitButton").click(function () {
-
         questionsSeen++;
         //var answer =  $("input:radio[name=answerBTN]:checked").val();
 
@@ -144,7 +143,7 @@ $(function(){
 
     $(".answers").on("click", "li.theAnswers", function(){
         console.log("clicked");
-       // $(".answers li:eq(2)").css('background', 'black');
+        // $(".answers li:eq(2)").css('background', 'black');
         $(this).css("background-color", "#1e6609");
 
         if (!$(this).hasClass("active")) {
@@ -256,7 +255,7 @@ function displayQuestion(categoryID, currentQuestion ) {
 
     //select the question text and add it question section
     var question =   categories[categoryID].questions[currentQuestion].questionText;
-   // console.log(question);
+    // console.log(question);
     var questionClass = $(document).find(".UI > .questionText");
     $(questionClass).text(question);
 
@@ -275,9 +274,9 @@ function displayQuestion(categoryID, currentQuestion ) {
     //go through the possible number of answers and create a answer box
     var choice;
     for (i = 0; i < numChoices; i++) {
-       // choice = categories[categoryID].questions[currentQuestion].answers[i];
+        // choice = categories[categoryID].questions[currentQuestion].answers[i];
         choice = answersArray[i];
-       // $('<li><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" />' + choice + '</li> ').appendTo(answersList);
+        // $('<li><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" />' + choice + '</li> ').appendTo(answersList);
 
         $('<li id = "numAnswer' + i + ' " class = "theAnswers" value ='+i +' ><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
 
@@ -329,7 +328,7 @@ function displayScore(score, questionsSeen) {
     }
 
     else{
-    $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
+        $(scoreHead).text("You answered " + score + " out of " + questionsSeen + " questions ");
         var finalScore = (score/questionsSeen)  * 100 ;
         $(percentage).text("For a final score of " + finalScore);
     }
@@ -342,4 +341,3 @@ function displayScore(score, questionsSeen) {
 
 
 }
-
