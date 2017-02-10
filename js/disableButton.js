@@ -45,8 +45,6 @@ $("#category-button").click(function() {
 
 $("#start-button").click(function() {
 	if (isSelected) {
-        var choice = $("categories:checked");
-        choice.checked = false;
         var window = $("#categoryPicker");
         window.modal('toggle');
         console.log(choice);
@@ -85,7 +83,7 @@ function reset() {
 }
 
 function resetWindow() {
-    categories[0].selected = false;
+    /*categories[0].selected = false;
     categories[1].selected = false;
     categories[2].selected = false;
     categories[3].selected = false;
@@ -94,16 +92,30 @@ function resetWindow() {
     categories[1].checked = false;
     categories[2].checked = false;
     categories[3].checked = false;
-
+*/
    /* (categories[0]).removeAttr('checked');
     (categories[1]).removeAttr('checked');
     (categories[2]).removeAttr('checked');
     (categories[3]).removeAttr('checked');*/
 
-    console.log("print something");
+    //$( "categories:radio" ).checked = false;
+    //$("li.categories > li").selected = false;
+
+
+
+    //var radios = $(":radio")
+    //var radios = $("ul li.categories:radio")
+    //console.log(radios);
+    //radios.checked = false;
+    //$("ul li:gt(0)").checked = "false";
+    $(":radio").prop('checked', false);
+
+
+    /*console.log("print something");
     console.log(categories[0]);
     console.log(categories[1]);
     console.log(categories[2]);
-    console.log(categories[3]);
+    console.log(categories[3]);*/
+    //console.log($("categories:radio"));
     reset();
 }
