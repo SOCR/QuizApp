@@ -40,6 +40,7 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/sample.js"></script>
 		<script src="js/quizapp.js"></script>
+
 </head>
 
 <body>
@@ -218,8 +219,8 @@
 				<div class="hero-unit">
 					<h1>SOCR Quiz App</h1>
 				</div>
-              	
-                <p>App goes here</p>
+
+				<div class="tpos">Remaining time is <span id="time"></span> minutes!</div>
                <!-- Begin Body HTML Code -->
 
 				<!-- Start Modal -->
@@ -311,7 +312,9 @@
 					<h5 class="score">Score: </h5>
 					<h5 class ="category"> </h5>
 					<p class="questionText"></p>
+					<p class = "numCategoryQuestions"> </p>
 					<ul class="answers"></ul>
+					<button input="newCategory" class = "newCategory btn-primary">New Category</button>
 					<button input="submitButton" class = "submitButton btn-primary">Next Question</button>
 					<button input = "endQuiz" class = "endQuiz btn-success" > End Quiz</button>
 				</div>
