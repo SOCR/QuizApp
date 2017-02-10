@@ -1,376 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	  	<meta charset="utf-8">
-        <title>SOCR Quiz App Project</title>
-	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  	<meta name="description" content="Statistics Online Computational Resource">
-	  	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
-		<meta name="keywords" content="Statistics Online Computational Resources">
-  		<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
-    
-        <!-- Import Statements for CSS files -->
-	    <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/sample.css" type="text/css">
-  		<link href="./css/bootstrap.css" rel="stylesheet">
-  		<style type="text/css">
-		      body {
-		        padding-top: 60px;
-		        padding-bottom: 40px;
-		      }
-		</style>
-		<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
-		<style type="text/css">body {position: static !important; top:0px !important;}</style>
-		
-  	 	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>SOCR Quiz App Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Statistics Online Computational Resource">
+	<meta name="author" content="Ivo Dinov - http://www.socr.umich.edu">
+	<meta name="keywords" content="Statistics Online Computational Resources">
+	<meta name="google-translate-customization" content="234bd10e86451464-6ab57950282faa06-ga85495cbe56600a4-e"></meta>
 
-	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-      		<script src="js/html5.js"></script>
-    	<![endif]-->
-    	
-    	<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
-    	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
+	<!-- Import Statements for CSS files -->
+	<link rel="stylesheet" href="./css/sample.css" type="text/css">
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			padding-top: 60px;
+			padding-bottom: 40px;
+		}
+	</style>
+	<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+	<style type="text/css">body {position: static !important; top:0px !important;}</style>
 
-		<!-- Import JS files -->
-		<script src="./js/jquery.js"></script>
-  		<script src="./js/bootstrap-modal.js"></script>
-    	<script src="js/disableButton.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/sample.js"></script>
-		<script src="js/quizapp.js"></script>
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
 
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="js/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="../img/SOCR_Web_Icon.ico">
+	<link rel="alternate" type="application/rss+xml" rel="tooltip" title="SOCR News" href="feed.rss">
+
+	<!-- Import JS files -->
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap-modal.js"></script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/sample.js"></script>
+	<script src="js/quizapp.js"></script>
+	<script src="js/timer.js"></script>
 </head>
 
 <body>
 
 
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container-fluid"> 
-				<a class="btn btn-navbar"
-				 data-toggle="collapse" data-target=".nav-collapse"> <span
-				 class="icon-bar"></span> <span class="icon-bar"></span> <span
-				 class="icon-bar"></span>
-				</a> 
-				<a class="brand" href="../index.html" rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
-				<div class="nav-collapse collapse">
-					<p class="navbar-text pull-right"> 
-						<a href="feed.rss" class="btn icon rss">
-							<i class="icon-bullhorn"></i>RSS</a>
-				 	</p>
-					<ul class="nav">
-				  		<!-- <li class="active"><a href="#">Home</a></li>  -->
-				  		<li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
-			                	title="Learn about the SOCR Resource">About<b class="caret"></b></a>
-			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-				                  <li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
-				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News and Events</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR Team</a></li>
-				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
-				                  <li><a tabindex="-1" href="SOCR_Contact.html">Contact</a></li>
-				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
-				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
-				                  <li class="divider"></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
-				                  <li><a tabindex="-1" href="http://SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
-				                  <li class="divider"></li>
-				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR Wiki</a></li>
-				                  <li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR Servers</a></li>
-				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
-				                  <li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language Translation</a></li>
-				                  <li class="divider"></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/Navigators.html" rel="tooltip" title="SOCR Resource Graphical Navigator">
-				                  	SOCR Resource Navigator</a></li>
-				                  
-			                </ul>
-			            </li>
-				  		<li><a href="SOCR_Contact.html" rel="tooltip" title="Contact the SOCR Resource">Contact</a></li>
-				  		<li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
-			                	title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
-			                	Java Applets<b class="caret"></b></a>
-			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-				                  <li><a tabindex="-1" href="#" rel="tooltip" 
-			                		title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java 1.6 Applets</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
-				                  <li><a tabindex="-1" href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
-				                  <li class="divider"></li>
-				                  <li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip" 
-			                		title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy Java 1.5 Applets</a></li>
-				            </ul>
-			            </li>
-			            <li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
-			                	title="A collection of portable modern HTML5 Webapps">Webapps<b class="caret"></b></a>
-			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/MotionChart/">Motion Charts</a></li> <li><a tabindex="-1" href="http://www.distributome.org/V3">Distributome Navigator</a></li>
-				                  <li><a tabindex="-1" href="http://www.distributome.org/tools.html">Distributome Webapps</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate Normal Distribution Calculator</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin Chart</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization and Resampling Webapp</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other SOCR HTML5 Webapps</a></li>
-			                </ul>
-			            </li>
-			            <li class="dropdown">
-			                <a class="dropdown-toggle" id="drop5" role="button" 
-			                	data-toggle="dropdown" href="#" rel="tooltip" 
-			                	title="Additional SOCR Resources">More<b class="caret"></b></a>
-			                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision Calculators</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function and Image-Processing Applets</a></li>
-				                  <li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other Java Applets</a></li>
-				            </ul>
-			            </li>
-			            <li> <a href="http://nursing.umich.edu" rel="tooltip" 
-								title="University of Michigan School of Nursing">UMSN</a></li>
-						<li><div id="google_translate_element" class="nav-collapse collapse"></div>
-								<script type="text/javascript">
-									function googleTranslateElementInit() {
-								  		new google.translate.TranslateElement({pageLanguage: 'en', 
-									  		layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
-									  		gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
-								}
-								</script>
-								<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-								</script>  
-			            </li>
-					</ul>
-				</div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="btn btn-navbar"
+			   data-toggle="collapse" data-target=".nav-collapse"> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</a>
+			<a class="brand" href="../index.html" rel="tooltip" title="Statistics Online Computational Resource">SOCR</a>
+			<div class="nav-collapse collapse">
+				<p class="navbar-text pull-right">
+					<a href="feed.rss" class="btn icon rss">
+						<i class="icon-bullhorn"></i>RSS</a>
+				</p>
+				<ul class="nav">
+					<!-- <li class="active"><a href="#">Home</a></li>  -->
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="drop5" role="button"
+						   data-toggle="dropdown" href="#" rel="tooltip"
+						   title="Learn about the SOCR Resource">About<b class="caret"></b></a>
+						<ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+							<li><a tabindex="-1" href="SOCR_About.html">About SOCR</a></li>
+							<li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News and Events</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/people">SOCR Team</a></li>
+							<li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_UserGoogleMap.html">Geo-Map</a></li>
+							<li><a tabindex="-1" href="SOCR_Contact.html">Contact</a></li>
+							<li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_News">News/Events</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Publications.html">Publications</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Recognitions.html">Recognitions</a></li>
+							<li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Brochure_UMich.pdf">Brochure</a></li>
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Funding.html">Funding</a></li>
+							<li><a tabindex="-1" href="http://SOCR.umich.edu/html/SOCR_Support.html">Donations</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Acknowledgments.html">Acknowledgments</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_CitingLicense.html">Citing/Licences</a></li>
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="http://wiki.socr.umich.edu/">SOCR Wiki</a></li>
+							<li><a tabindex="-1" href="http://wiki.socr.umich.edu/index.php/SOCR_Servers">SOCR Servers</a></li>
+							<li><a tabindex="-1" href="http://www.socr.umich.edu/docs/SOCR_Documentation.html">Documentation</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/SOCR_Download.html">Download</a></li>
+							<li><a tabindex="-1" href="http://www.socr.umich.edu/html/SOCR_Languages.html">Language Translation</a></li>
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/Navigators.html" rel="tooltip" title="SOCR Resource Graphical Navigator">
+								SOCR Resource Navigator</a></li>
 
-				<!--/.nav-collapse --> 
+						</ul>
+					</li>
+					<li><a href="SOCR_Contact.html" rel="tooltip" title="Contact the SOCR Resource">Contact</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="drop5" role="button"
+						   data-toggle="dropdown" href="#" rel="tooltip"
+						   title="Use these tools if your browser is Java/JVM 1.6+ enabled!">
+							Java Applets<b class="caret"></b></a>
+						<ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+							<li><a tabindex="-1" href="#" rel="tooltip"
+								   title="Use these tools if your browser is Java/JVM 1.6+ enabled!">Java 1.6 Applets</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/dist/">Distributions</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/exp">Experiments</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/mod">Modeler</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/ana">Analyses</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/cha">Charts</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/html/gam">Games</a></li>
+							<li><a tabindex="-1" href="http://socr.ucla.edu/webstart/index.html">Web-Start</a></li>
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="http://socr.ucla.edu/legacy/htmls/" rel="tooltip"
+								   title="For older Java/JVM 1.5 enabled Browsers Use the links below!">Legacy Java 1.5 Applets</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="drop5" role="button"
+						   data-toggle="dropdown" href="#" rel="tooltip"
+						   title="A collection of portable modern HTML5 Webapps">Webapps<b class="caret"></b></a>
+						<ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+							<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/MotionChart/">Motion Charts</a></li> <li><a tabindex="-1" href="http://www.distributome.org/V3">Distributome Navigator</a></li>
+							<li><a tabindex="-1" href="http://www.distributome.org/tools.html">Distributome Webapps</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/BivariateNormal/">Bivariate Normal Distribution Calculator</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/charts/ViolinChart/">Violin Chart</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/Resampling_Webapp/">Randomization and Resampling Webapp</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/HTML5/">Other SOCR HTML5 Webapps</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="drop5" role="button"
+						   data-toggle="dropdown" href="#" rel="tooltip"
+						   title="Additional SOCR Resources">More<b class="caret"></b></a>
+						<ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+							<li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators">High-Precision Calculators</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Tables">Probability Tables</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Function_and_Image-Processing_Tools">Function and Image-Processing Applets</a></li>
+							<li><a tabindex="-1" href="http://socr.umich.edu/Applets/index.html#Other_Interesting_Java_Applets">Other Java Applets</a></li>
+						</ul>
+					</li>
+					<li> <a href="http://nursing.umich.edu" rel="tooltip"
+							title="University of Michigan School of Nursing">UMSN</a></li>
+					<li><div id="google_translate_element" class="nav-collapse collapse"></div>
+						<script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({pageLanguage: 'en',
+                                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false,
+                                    gaTrack: true, gaId: 'UA-676559-1'}, 'google_translate_element');
+                            }
+						</script>
+						<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+						</script>
+					</li>
+				</ul>
 			</div>
+
+			<!--/.nav-collapse -->
 		</div>
 	</div>
-	
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="span3">
-				<div class="well sidebar-nav">
-					<ul class="nav nav-list">
-					  <li class="nav-header">Get Started</li>
-					  <!-- to make an item highlighted:  <li class="active">  -->
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Videos">Videos</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Help_Pages">Help Pages</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials">Activities</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Courses">Courses</a></li>
-					  <li class="nav-header">Webapps and Resources</li>
-					  <li><a href="http://socr.umich.edu/Applets/index.html#Tables"
-					  		title="Probaiblity Distribution Tables">Tables</a></li>
-					  <li><a href="http://socr.umich.edu/HTML5/"
-					  		title="Modern browser embedded web-applications">New Webapps</a></li>
-					  <li><a href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators"
-					  		title="High-Precision Distribution Calculators">Precision Calculators</a></li>
-					  <li class="nav-header">Java Applets</li>
-					  <li><a href="http://socr.umich.edu/html/dist/"
-					  		title="Probability Distribution Calculators">Distributions</a></li>
-					  <li><a href="http://socr.umich.edu/html/exp"
-					  		title="Virtual Computer Experiments and Simulations">Experiments</a></li>
-					  <li><a href="http://socr.umich.edu/html/ana/">Analyses</a></li>
-					  <li><a href="http://socr.umich.edu/html/mod">Data Modeler</a></li>
-					  <li><a href="http://socr.umich.edu/html/cha">Charts and Graphs</a></li>
-					  <li><a href="http://socr.umich.edu/html/gam">Games</a></li>
-					  <li class="nav-header">Learning Materials</li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/EBook">EBook</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Data">Datasets</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials"
-					  		title="Learning Modules and Hands-on Activities">Activities</a></li>
-					  <li class="nav-header">Contribute to SOCR</li>
-					  <li><a href="http://www.SOCR.umich.edu/html/SOCR_Support.html"
-					  		title="Consider making donations of any size to support SOCR student stipends and instructors training">Donations</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/Available_SOCR_Development_Projects">
-					  		SOCR Projects</a></li>
-					  <li><a href="http://wiki.socr.umich.edu/index.php/SOCR_News">Events</a></li>
-					  <li><a href="http://forums.stat.ucla.edu/socr">Forum</a></li>
-					  <li><a href="http://www.socr.umich.edu/html/SOCR_Feedback.html">Survey</a></li>
-					</ul>
-				</div>
-				<div class="span10"> 
- 					<a href="../img/SOCR_3D_Logo_UM.png"><img alt="SOCR Logo"
-	 					title="SOCR UMichigan Logo" src="../img/SOCR_3D_Logo_UM.png"
-	 					style="width: 75%;" align="left" hspace="1" vspace="1"></a>
-	 				<a href="../img/SOCR_QRcode.png"><img title="SOCR QR Code"
- 						src="../img/SOCR_QRcode.png" alt="SOCR QR Code"
- 						style="width: 40%;" align="left" hspace="1" vspace="1"></a>		
-				</div>
-				<!--/.well --> 
+</div>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="well sidebar-nav">
+				<ul class="nav nav-list">
+					<li class="nav-header">Get Started</li>
+					<!-- to make an item highlighted:  <li class="active">  -->
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Videos">Videos</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Help_Pages">Help Pages</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials">Activities</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Courses">Courses</a></li>
+					<li class="nav-header">Webapps and Resources</li>
+					<li><a href="http://socr.umich.edu/Applets/index.html#Tables"
+						   title="Probaiblity Distribution Tables">Tables</a></li>
+					<li><a href="http://socr.umich.edu/HTML5/"
+						   title="Modern browser embedded web-applications">New Webapps</a></li>
+					<li><a href="http://socr.umich.edu/Applets/index.html#High-Precision_Distribution_Calculators"
+						   title="High-Precision Distribution Calculators">Precision Calculators</a></li>
+					<li class="nav-header">Java Applets</li>
+					<li><a href="http://socr.umich.edu/html/dist/"
+						   title="Probability Distribution Calculators">Distributions</a></li>
+					<li><a href="http://socr.umich.edu/html/exp"
+						   title="Virtual Computer Experiments and Simulations">Experiments</a></li>
+					<li><a href="http://socr.umich.edu/html/ana/">Analyses</a></li>
+					<li><a href="http://socr.umich.edu/html/mod">Data Modeler</a></li>
+					<li><a href="http://socr.umich.edu/html/cha">Charts and Graphs</a></li>
+					<li><a href="http://socr.umich.edu/html/gam">Games</a></li>
+					<li class="nav-header">Learning Materials</li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/EBook">EBook</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_Data">Datasets</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_EduMaterials"
+						   title="Learning Modules and Hands-on Activities">Activities</a></li>
+					<li class="nav-header">Contribute to SOCR</li>
+					<li><a href="http://www.SOCR.umich.edu/html/SOCR_Support.html"
+						   title="Consider making donations of any size to support SOCR student stipends and instructors training">Donations</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/Available_SOCR_Development_Projects">
+						SOCR Projects</a></li>
+					<li><a href="http://wiki.socr.umich.edu/index.php/SOCR_News">Events</a></li>
+					<li><a href="http://forums.stat.ucla.edu/socr">Forum</a></li>
+					<li><a href="http://www.socr.umich.edu/html/SOCR_Feedback.html">Survey</a></li>
+				</ul>
 			</div>
-	
-			<!--/span-->
-			<div class="span9">
-				<div class="hero-unit">
-					<h1>SOCR Quiz App</h1>
-				</div>
-
-				<div class="tpos">Remaining time is <span id="time"></span> minutes!</div>
-               <!-- Begin Body HTML Code -->
-
-				<!-- Start Modal -->
-				<div class="modal fade" id="myModal" role="dialog">
-					<div class="modal-dialog modal-lg">
-
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">Instruction</h4>
-							</div>
-							<div class="modal-body">
-									<p>The SOCR Quiz App is a web-based application. It is designed to test the user's knowledge of bioinformatics and machine learning concepts using a multiple-choice style quiz.</p>
-									<p>Questions will be divided into categories, and a simple points system will be used to keep score.</p>
-							</div>
-							<div class="modal-footer">
-								<button type="button" id = "start-btn" class="btn btn-primary" data-dismiss="modal">Start</button>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-
-
-				<!-- Category Picking Model -->
-
-				<!-- Modal -->
-				<div class="modal fade" id="categoryPicker" role="dialog">
-					<div class="modal-dialog modal-lg">
-
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">Choose A Category</h4>
-							</div>
-							<div class="modal-body">
-								<p>Select one</p>
-								<li class = "categories"> </li>
-
-							</div>
-							<div class="modal-footer">
-								<button type="button" id = "start-button" class="btn btn-primary" name ="selectCategory" >Start</button>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-
-
-				<!-- Category Picking Model -->
-
-
-
-				<!-- Modal -->
-				<div class="modal fade" id="scoreboard" role="dialog">
-					<div class="modal-dialog modal-lg">
-
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">Final Score</h4>
-							</div>
-							<div class="modal-body">
-								<p class = "scoreHeader "> </p>
-								<p class = "score"> </p>
-
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-
-
-
-
-
-
-				<div class="UI container-fluid">
-
-					<h5 class="score">Score: </h5>
-					<h5 class ="category"> </h5>
-					<p class="questionText"></p>
-					<p class = "numCategoryQuestions"> </p>
-					<ul class="answers"></ul>
-					<button input="newCategory" class = "newCategory btn-primary">New Category</button>
-					<button input="submitButton" class = "submitButton btn-primary">Next Question</button>
-					<button input = "endQuiz" class = "endQuiz btn-success" > End Quiz</button>
-				</div>
-
-
-
-
-
-
-
-				<!-- End Body HTML Code -->
-        
-    
-				<!--/row-->
+			<div class="span10">
+				<a href="../img/SOCR_3D_Logo_UM.png"><img alt="SOCR Logo"
+														  title="SOCR UMichigan Logo" src="../img/SOCR_3D_Logo_UM.png"
+														  style="width: 75%;" align="left" hspace="1" vspace="1"></a>
+				<a href="../img/SOCR_QRcode.png"><img title="SOCR QR Code"
+													  src="../img/SOCR_QRcode.png" alt="SOCR QR Code"
+													  style="width: 40%;" align="left" hspace="1" vspace="1"></a>
 			</div>
-			<!--/span-->
+			<!--/.well -->
 		</div>
-		<!--/row-->
-		<footer><center>
-			<a href="http://www.socr.umich.edu/">SOCR Resource</a>
-				Visitor number <img src="http://counter.digits.net/?counter=SOCR"
-	 			align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
-				<script type="text/javascript"> var d=new Date(); 
-				document.write(" | "+d.getFullYear()+" | "); </script> 
-				<a href="../img/SOCR_Email.png"><img alt="SOCR Email"
-	 			title="SOCR Email" src="../img/SOCR_Email.png"
-	 			style="border: 0px solid ;"></a>
-	 		 </center>
-	 	</footer>
-	</div>
-	<!--/.fluid-container-->
-	
-    
-     <!-- Import Statements for JS files, add new files at the end -->
-	<script src="./js/jquery.js"></script>
-    <script src="./js/sample.js" type="text/javascript"></script>
-	<script src="./js/bootstrap-transition.js"></script>
-	<script src="./js/bootstrap-alert.js"></script>
-	<script src="./js/bootstrap-modal.js"></script>
-	<script src="./js/bootstrap-dropdown.js"></script>
-	<script src="./js/bootstrap-scrollspy.js"></script>
-	<script src="./js/bootstrap-tab.js"></script>
-	<script src="./js/bootstrap-tooltip.js"></script>
-	<script src="./js/bootstrap-popover.js"></script>
-	<script src="./js/bootstrap-button.js"></script>
-	<script src="./js/bootstrap-collapse.js"></script>
-	<script src="./js/bootstrap-carousel.js"></script>
-	<script src="./js/bootstrap-typeahead.js"></script>
-	<script src="./js/disableButton.js"></script>
-    <!-- End Import Statements for JS files-->
-	
 
-	
-	<!-- GoogleAnalytics -->
-		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
-		<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
-	<!-- End of GoogleAnalytics Code -->
+		<!--/span-->
+		<div class="span9">
+			<div class="hero-unit">
+				<h1>SOCR Quiz App</h1>
+			</div>
+
+			<div class="tpos">Remaining time is <span id="time"></span> minutes!</div>
+			<!-- Begin Body HTML Code -->
+
+			<!-- Start Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog modal-lg">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Instruction</h4>
+						</div>
+						<div class="modal-body">
+							<p>The SOCR Quiz App is a web-based application. It is designed to test the user's knowledge of bioinformatics and machine learning concepts using a multiple-choice style quiz.</p>
+							<p>Questions will be divided into categories, and a simple points system will be used to keep score.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" id = "start-btn" class="btn btn-primary" data-dismiss="modal">Start</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<!-- Category Picking Model -->
+
+			<!-- Modal -->
+			<div class="modal fade" id="categoryPicker" role="dialog">
+				<div class="modal-dialog modal-lg">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Choose A Category</h4>
+						</div>
+						<div class="modal-body">
+							<p>Select one</p>
+							<li class = "categories"> </li>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal">Start</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<!-- Category Picking Model -->
+
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="scoreboard" role="dialog">
+				<div class="modal-dialog modal-lg">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Final Score</h4>
+						</div>
+						<div class="modal-body">
+							<p class = "scoreHeader "> </p>
+							<p class = "score"> </p>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+			<div class="UI container-fluid">
+
+				<h5 class="score">Score: </h5>
+				<h5 class ="category"> </h5>
+				<p class="questionText"></p>
+				<p class = "numCategoryQuestions"> </p>
+				<ul class="answers"></ul>
+				<button input="newCategory" class = "newCategory btn-primary">New Category</button>
+				<button input="submitButton" class = "submitButton btn-primary">Next Question</button>
+				<button input = "endQuiz" class = "endQuiz btn-success" > End Quiz</button>
+			</div>
+
+
+
+
+
+
+
+			<!-- End Body HTML Code -->
+
+
+			<!--/row-->
+		</div>
+		<!--/span-->
+	</div>
+	<!--/row-->
+	<footer><center>
+		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
+		Visitor number <img src="http://counter.digits.net/?counter=SOCR"
+							align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
+		<script type="text/javascript"> var d=new Date();
+        document.write(" | "+d.getFullYear()+" | "); </script>
+		<a href="../img/SOCR_Email.png"><img alt="SOCR Email"
+											 title="SOCR Email" src="../img/SOCR_Email.png"
+											 style="border: 0px solid ;"></a>
+	</center>
+	</footer>
+</div>
+<!--/.fluid-container-->
+
+
+<!-- Import Statements for JS files, add new files at the end -->
+<script src="./js/jquery.js"></script>
+<script src="./js/sample.js" type="text/javascript"></script>
+<script src="./js/bootstrap-transition.js"></script>
+<script src="./js/bootstrap-alert.js"></script>
+<script src="./js/bootstrap-modal.js"></script>
+<script src="./js/bootstrap-dropdown.js"></script>
+<script src="./js/bootstrap-scrollspy.js"></script>
+<script src="./js/bootstrap-tab.js"></script>
+<script src="./js/bootstrap-tooltip.js"></script>
+<script src="./js/bootstrap-popover.js"></script>
+<script src="./js/bootstrap-button.js"></script>
+<script src="./js/bootstrap-collapse.js"></script>
+<script src="./js/bootstrap-carousel.js"></script>
+<script src="./js/bootstrap-typeahead.js"></script>
+<!-- End Import Statements for JS files-->
+
+
+
+<!-- GoogleAnalytics -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
+<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+<!-- End of GoogleAnalytics Code -->
 </body>
 </html>
