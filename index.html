@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<title>SOCR Quiz App Project</title>
@@ -202,25 +203,35 @@
 					<li><a href="http://www.socr.umich.edu/html/SOCR_Feedback.html">Survey</a></li>
 				</ul>
 			</div>
-			<div class="span10">
-				<a href="../img/SOCR_3D_Logo_UM.png"><img alt="SOCR Logo"
-														  title="SOCR UMichigan Logo" src="../img/SOCR_3D_Logo_UM.png"
-														  style="width: 75%;" align="left" hspace="1" vspace="1"></a>
-				<a href="../img/SOCR_QRcode.png"><img title="SOCR QR Code"
-													  src="../img/SOCR_QRcode.png" alt="SOCR QR Code"
-													  style="width: 40%;" align="left" hspace="1" vspace="1"></a>
-			</div>
-			<!--/.well -->
-		</div>
+	
+			<!--/span-->
+			<div class="span9">
+				<div class="hero-unit">
+					<h1>SOCR Quiz App</h1>
+				</div>
+               <!-- Begin Body HTML Code -->
 
-		<!--/span-->
-		<div class="span9">
-			<div class="hero-unit">
-				<h1>SOCR Quiz App</h1>
-			</div>
+				<section id="timerzone"></section>
 
-			<div class="tpos">Remaining time is <span id="time"></span> minutes!</div>
-			<!-- Begin Body HTML Code -->
+				<!-- Start Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog modal-lg">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Instruction</h4>
+							</div>
+							<div class="modal-body">
+									<p>The SOCR Quiz App is a web-based application. It is designed to test the user's knowledge of bioinformatics and machine learning concepts using a multiple-choice style quiz.</p>
+									<p>Questions will be divided into categories, and a simple points system will be used to keep score.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" id = "start-btn" class="btn btn-primary" data-dismiss="modal">Start</button>
+							</div>
+						</div>
+
 
 			<!-- Start Modal -->
 			<div class="modal fade" id="myModal" role="dialog">
@@ -252,11 +263,11 @@
 			<div class="modal fade" id="categoryPicker" role="dialog">
 				<div class="modal-dialog modal-lg">
 
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Choose A Category</h4>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" name ="selectCategory" data-dismiss="modal" id="timeStart">Start</button>
+							</div>
+
 						</div>
 						<div class="modal-body">
 							<p>Select one</p>
@@ -334,52 +345,46 @@
 
 
 
-			<!-- End Body HTML Code -->
 
 
-			<!--/row-->
+
+				<!-- End Body HTML Code -->
+        
+    
+				<!--/row-->
+			</div>
+			<!--/span-->
 		</div>
 		<!--/span-->
 	</div>
-	<!--/row-->
-	<footer><center>
-		<a href="http://www.socr.umich.edu/">SOCR Resource</a>
-		Visitor number <img src="http://counter.digits.net/?counter=SOCR"
-							align="middle" border="0" height="20" hspace="4" vspace="2" width="60">
-		<script type="text/javascript"> var d=new Date();
-        document.write(" | "+d.getFullYear()+" | "); </script>
-		<a href="../img/SOCR_Email.png"><img alt="SOCR Email"
-											 title="SOCR Email" src="../img/SOCR_Email.png"
-											 style="border: 0px solid ;"></a>
-	</center>
-	</footer>
-</div>
-<!--/.fluid-container-->
-
-
-<!-- Import Statements for JS files, add new files at the end -->
-<script src="./js/jquery.js"></script>
+	<!--/.fluid-container-->
+	
+    
+     <!-- Import Statements for JS files, add new files at the end -->
+	<script src="./js/jquery.js"></script>
 <script src="./js/disableButton.js"></script>
-<script src="./js/sample.js" type="text/javascript"></script>
-<script src="./js/bootstrap-transition.js"></script>
-<script src="./js/bootstrap-alert.js"></script>
-<script src="./js/bootstrap-modal.js"></script>
-<script src="./js/bootstrap-dropdown.js"></script>
-<script src="./js/bootstrap-scrollspy.js"></script>
-<script src="./js/bootstrap-tab.js"></script>
-<script src="./js/bootstrap-tooltip.js"></script>
-<script src="./js/bootstrap-popover.js"></script>
-<script src="./js/bootstrap-button.js"></script>
-<script src="./js/bootstrap-collapse.js"></script>
-<script src="./js/bootstrap-carousel.js"></script>
-<script src="./js/bootstrap-typeahead.js"></script>
-<!-- End Import Statements for JS files-->
+    <script src="./js/sample.js" type="text/javascript"></script>
+	<script src="./js/bootstrap-transition.js"></script>
+	<script src="./js/bootstrap-alert.js"></script>
+	<script src="./js/bootstrap-modal.js"></script>
+	<script src="./js/bootstrap-dropdown.js"></script>
+	<script src="./js/bootstrap-scrollspy.js"></script>
+	<script src="./js/bootstrap-tab.js"></script>
+	<script src="./js/bootstrap-tooltip.js"></script>
+	<script src="./js/bootstrap-popover.js"></script>
+	<script src="./js/bootstrap-button.js"></script>
+	<script src="./js/bootstrap-collapse.js"></script>
+	<script src="./js/bootstrap-carousel.js"></script>
+	<script src="./js/bootstrap-typeahead.js"></script>
+	<script src="js/timer2.js"></script>
+	<!-- End Import Statements for JS files-->
+	
 
+	
+	<!-- GoogleAnalytics -->
+		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
+		<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
+	<!-- End of GoogleAnalytics Code -->
 
-
-<!-- GoogleAnalytics -->
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> </script>
-<script type="text/javascript"> _uacct = "UA-676559-1"; urchinTracker(); </script>
-<!-- End of GoogleAnalytics Code -->
 </body>
 </html>
