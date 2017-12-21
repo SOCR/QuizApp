@@ -84,7 +84,9 @@ $(function(){
         }
 
     ];
-
+    $.getJSON("../questions.json", function(json) {
+        categories = json;
+    });
     //id for the start menu and category menu
     var startMenu = document.getElementById('myModal');
     var categoryMenu = document.getElementById('categoryPicker');
