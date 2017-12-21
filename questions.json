@@ -1,0 +1,73 @@
+[{
+        "name": "Big Data",
+        "questions": [{
+            "questionText": "What is Probability",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "What is chance",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "What is the meaning?",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }, {
+            "questionText": "sample question1",
+            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+        }]
+
+    },
+
+        {
+            "name": "Machine Learning",
+            "questions": [{
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
+        },
+
+        {
+            "name": "Math",
+            "questions": [{
+                "questionText": "What is 1 + 1",
+                "answers": ["2", "3", "10", "11"]
+            }, {
+                "questionText": "What 7 x 7 ",
+                "answers": ["49", "3", "21", "77"]
+            }, {
+                "questionText": "What is 100 - 9?",
+                "answers": ["81", "91", "70", "60"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
+
+        },
+
+        {
+            "name": "Biology",
+            "questions": [{
+                "questionText": "What is Probability",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "What is chance",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "What is the meaning?",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }, {
+                "questionText": "sample question1",
+                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
+            }]
+
+        }
+
+    ]
