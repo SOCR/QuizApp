@@ -191,6 +191,7 @@ function displayCategory(categoryMenu, categoryList) {
         choice = categories[i].name;
         $('<li><input type="radio" value=' + i + ' name="categoryBTN" />' + choice + '</li>').appendTo(categoryList);
     }
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,categoryList]);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -279,6 +280,8 @@ function displayQuestion(categoryID, currentQuestion ) {
         $('<li id = "numAnswer' + i + ' " class = "theAnswers" value ='+i +' ><label for = "answer" >' + choice + ' </label><input type="radio" value=' + i + ' name= "answerBTN" class = "answerBTN" /></li> ').appendTo(answersList);
 
     }
+    
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
