@@ -84,7 +84,7 @@ $(function(){
         }
 
     ];
-    $.getJSON("../rsc/questions.json", function(json) {
+    $.getJSON("./rsc/questions.json", function(json) {
         categories = json;
     });
     //id for the start menu and category menu
