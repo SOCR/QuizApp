@@ -1,73 +1,178 @@
-[{
-        "name": "Big Data",
-        "questions": [{
-            "questionText": "What is Probability",
-            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }, {
-            "questionText": "What is chance",
-            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }, {
-            "questionText": "What is the meaning?",
-            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }, {
-            "questionText": "sample question1",
-            "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-        }]
-
-    },
-
-        {
-            "name": "Machine Learning",
-            "questions": [{
-                "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-
-            }, {
-                "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }, {
-                "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }, {
-                "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }]
-        },
-
-        {
-            "name": "Math",
-            "questions": [{
-                "questionText": "What is 1 + 1",
-                "answers": ["2", "3", "10", "11"]
-            }, {
-                "questionText": "What 7 x 7 ",
-                "answers": ["49", "3", "21", "77"]
-            }, {
-                "questionText": "What is 100 - 9?",
-                "answers": ["81", "91", "70", "60"]
-            }, {
-                "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }]
-
-        },
-
-        {
-            "name": "Biology",
-            "questions": [{
-                "questionText": "What is Probability",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }, {
-                "questionText": "What is chance",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }, {
-                "questionText": "What is the meaning?",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }, {
-                "questionText": "sample question1",
-                "answers": ["correctanswer", "wronganswer1", "wronganswer2", "wronganswer3"]
-            }]
-
-        }
-
-    ]
+[
+   {
+      "name":"Data Modeling",
+      "questions":[
+         {
+            "questionText":"Give examples of linear, polynomial and exponential models of an outcome (Y) in terms of some observed input (X)",
+            "answers":[
+               "Y=3X+5(Linear), Y=2X^2+3X\u20133(Polynomial), Y = 2e^-2x(Exponential)",
+               "Y=2X^2+3X\u20133(Linear), Y=3^X+3X+5(Polynomial),Y = 2e^-2x(Exponential)",
+               "Y=3^X+3X+5(Linear), Y=2X^2+3X\u20133(Polynominal), Y = 2e^-2x(Exponential)",
+               "wronganswer3"
+            ]
+         },
+         {
+            "questionText":"What is a Graph ?",
+            "answers":[
+               "A graph is an ordered pair G = (V, E) comprising a set V of vertices or nodes or points together with a set E of edges or arcs or lines, which are 2-element subsets of V",
+               "A graph is object that shows relationship between nodes and vertices",
+               "Graph can be any object that conveys some informations",
+               "Graph is representation of vertices and nodes to show relationship in the data",
+               "A graph is a path that consists of vertices and nodes"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Probabilities",
+      "questions":[
+         {
+            "questionText":"Suppose we draw 2 balls randomly, one at a time without replacement, from an urn containing 4 black and 3 white balls, otherwise identical. What is the probability that the second ball is black?",
+            "answers":[
+               "4/7",
+               "2/7",
+               "3/7",
+               "2/3",
+               "1/3"
+            ]
+         },
+         {
+            "questionText":"Suppose a patient visits a primary care clinic and is seen by a male provider not wearing a badge or other insignia. Assume that the number of primary care physicians in the US is 435,000, the number of practicing nurses is 4,500,000, and the reported gender distributions in the 2 professions (F:M ratios are 1:2 for physicians and 12:1 for nurses). Using only this information, to address the clinician appropriately, the patient is trying to figure out if he is more likely to be a doctor or a nurse (assuming these are the only options in this clinical setting). Compute and interpret the odds likelihood ratio of the clinician being a nurse",
+            "answers":[
+               "5/8",
+               "1/2",
+               "3/8",
+               "5/6",
+               "2/3"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Formulation of Research Questions (Hypotheses), EDAs, and Confirmatory Data Analyses",
+      "questions":[
+         {
+            "questionText":"What is a statistic?",
+            "answers":[
+               "A test statistic is used in a hypothesis test when you are deciding to support or reject the null hypothesis",
+               "A test statistic is probability of support or reject of the null hypothesis",
+               "A test statistic is used to calculate the confidence bounds of estimate",
+               "A test statistic is used in a hypothesis test when you are deciding to support or reject the null hypothesis.However, it is only valid for z and t distribution",
+               "All of the above"
+            ]
+         },
+         {
+            "questionText":"What is a p-value?",
+            "answers":[
+               "The p-value is the level of marginal significance within a statistical hypothesis test representing the probability of the occurrence of a given even",
+               "It is the probability of rejecting/accepting Null hypothesis",
+               "It is the probability of occurence of estimate of interest if we were to repeatedly perfrom the experiment ",
+               "p-value is similar to test statistic used to reject or accept null hypothesis",
+               "All of the above"
+            ]
+         },
+         {
+            "questionText":"How to interpret a confidence interval of a parameter estimate?",
+            "answers":[
+               " If repeated samples were taken and the 95% confidence interval was computed for each sample, 95% of the intervals would contain the population mean",
+               "It is the probability that the point estimate is in the identified range/interval",
+               "After we define the confidence interval, the probability of point estimate to be in that range is 1 ",
+               "After we define the confidence interval, the probability of point estimate to be in that range is assumed confidence value",
+               "None of the above are correct"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Sorting Algorithms, and complexity",
+      "questions":[
+         {
+            "questionText":"Why is the computational complexity of the Bubble Sort algorithm is O(n2). This algorithm works by comparing each number in the list with the item next to it, and swaps them if needed to reorder the data from the smallest to the largest element.",
+            "answers":[
+               "The inner loop does O(n) work on each iteration, and the outer loop runs for O(n) iterations, so the total work is O(n^2)",
+               "The inner loop does O(n^2) work on each iteration, and the outer loop runs for O(n) iterations, so the total work is inner loop divided by outer i.e, O(n^2)",
+               "The inner loop does O(n^2) work on each iteration, and the outer loop runs for O(n^2) iterations, so the total work is square root of inner and outer i.e., O(n^2)",
+               "The inner loop does O(n) work on each iteration, and the outer loop runs for O(n^2) iterations, so the total work is outer divided by inner i.e., O(n^2)",
+               "None of them is correct"
+            ]
+         },
+         {
+            "questionText":"List 2 examples of programming syntax for sorting an array in R, python or Java languages;",
+            "answers":[
+               "In R, sort(array), In python, array.sort()",
+               "In R, sort_values(array), In python, array.sort()",
+               "In R, sort_values(array), In python, np.sort(array)",
+               "In R, sort(array), In python, array.sort()",
+               "In R, sort(array), In python, np.array.sort()",
+               "In R, sort(array), In python, np.sort.array"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"OOP, objects",
+      "questions":[
+         {
+            "questionText":"What is inheritance in object oriented programming?",
+            "answers":[
+               "Inheritance enables new objects to take on the properties of existing objects",
+               "Inheritance enables new properties to objects in it",
+               "Inheritance restricts the new objects from taking on the properties of existing objects",
+               "Inheritance is method of sharing parent class properties to its child classes",
+               "Option 1,4"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Data Formats, APIs",
+      "questions":[
+         {
+            "questionText":"What is binary data?",
+            "answers":[
+               "Data whose unit can take on only two possible states, traditionally termed 0 and +1 in accordance with the binary numeral system",
+               "Data whose unit can take on only two possible states, traditionally termed -1 and +1 in accordance with the binary numeral system",
+               "Data whose unit can take on only two possible states, traditionally termed 0 and +1 in accordance with the ASCII numeral standards",
+               "Data whose unit can take on only two possible states, traditionally termed -1 and +1 in accordance with the ASCII numeral system",
+               "Data whose unit can take on only two possible states, traditionally termed (0 and +1) or (-1 and 1), in accordance with the binary numeral system"
+            ]
+         },
+         {
+            "questionText":"What is a ASCII data ?",
+            "answers":[
+               " ASCII (American Standard Code for Information Interchange) is a term often used to mean that the data are stored in a human-readable manner, though it has a specific meaning with reference to the permitted characters allowed (i.e.,a-Z,A-Z,0-9 and few others)",
+               "wronganswer1",
+               "wronganswer2",
+               "wronganswer3"
+            ]
+         },
+         {
+            "questionText":"What is a Structured data ?",
+            "answers":[
+               "structured data refers to information with a high degree of organization, such that inclusion in a relational database is seamless and readily searchable by simple, straightforward search engine algorithms or other search operations",
+               "Structured data has a pre-defined schema or some sort of organization",
+               "wronganswer2",
+               "wronganswer3"
+            ]
+         },
+         {
+            "questionText":"What is a Unstructured data ?",
+            "answers":[
+               " Unstructured data (or unstructured information) is information that either does not have a pre-defined data model or is not organized in a pre-defined",
+               "wronganswer1",
+               "wronganswer2",
+               "wronganswer3"
+            ]
+         },
+         {
+            "questionText":"What is a JSON data ?",
+            "answers":[
+               " JSON is an open-standard file format that uses human-readable text to transmit data objects consisting of attribute\u2013value pairs and array data types (or any other serializable value",
+               "wronganswer1",
+               "wronganswer2",
+               "wronganswer3"
+            ]
+         }
+      ]
+   }
+]
