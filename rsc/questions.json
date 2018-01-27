@@ -1,5 +1,97 @@
 [
    {
+      "name":"Calculus of differentiation and integration",
+      "questions":[
+         {
+            "questionText":"What does the solution of this equation $-y<5+3x$ represents?",
+            "answers":[
+               "Half-plane",
+               "$R^2$",
+               "A line",
+               "Bounded area in $R^2$"
+            ]
+         },
+         {
+            "questionText":"What does the solution of this equation $-2x +3y -7z = 7$ represents?",
+            "answers":[
+               "2D Euclidean plane embedded in $R^3$",
+               "Surface of a ball, $S^2$",
+               "A line in space",
+               "Half a plane",
+               "A finite measure space"
+            ]
+         },
+         {
+            "questionText":"What does the solution of this equation represents? $\begin{array}{lcl} x+2y-z &=& 1 \\ 2x-2y+4z &=& -2 \\ -x+0.5y-z &=& 0 \end{array} $",
+            "answers":[
+               "A point in $R^3$",
+               "A line in $R3$",
+               "A plane embedded in $R^3$",
+               "Empty set",
+               "A circle"
+            ]
+         },
+         {
+            "questionText":"What does the solution of this equation represents? $\int_{-\infty}^{\infty}{e^{-\frac{x^2}{2}} dx} =y $",
+            "answers":[
+               "$\sqrt{2\pi}$",
+               "A density",
+               "$1$",
+               "Undefined",
+               "$0$"
+            ]
+         },
+         {
+            "questionText":"What are the local and global extrema of the function $f(x)=x^3+3x^2−2x+1$ over the interval $[−4,2]$?",
+            "answers":[
+               "Local minimum ($\sim 0.6966852$) and maximum ($\sim 9.303315$); Global minimum (-7) and maximum (17)",
+               "A density",
+               "$1$",
+               "Undefined",
+               "$0$"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Numerical methods",
+      "questions":[
+         {
+            "questionText":"What does this series represent $\sum_{n=0}^{\infty} {	\frac{(-1)^n}{(2n+1)!} x^{2n+1} }?$?",
+            "answers":[
+               "The trigonometric sine function, $sin(x)$",
+               "The trigonometric cosine function, $cos(x)$",
+               "Taylor series expansion of $e^{x}$",
+               "A divergent series"
+            ]
+         },
+         {
+            "questionText":"Starting with $x_o=3$, complete 3 iterations of the Newton-Raphson method, $x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$, to estimate a root of $f(x)=x^3-20$, i.e., find a solution to this equation: $f(x)=x^3-20=0$.",
+            "answers":[
+               "2.7",
+               "-10",
+               "5",
+               "Undefined",
+               "8000"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Matrix manipulations",
+      "questions":[
+         {
+            "questionText":"If $A_{3\times 3}= 	\begin{pmatrix} 3 & 2 & -1 \\ 2 & -2 & 4 \\ -1 & 1/2 & -1 \end{pmatrix}$ and $x_{3\times 1}= \begin{pmatrix} 1 \\ -2 \\ -2 \end{pmatrix}$, what is the product $A_{3\times 3} \times x_{3\times 1}$?",
+            "answers":[
+               "The vector $(1,-2,0)^t$",
+               "The matrix $\begin{pmatrix} 3 & 2 & -1 \\ -4 & 4 & -8 \\ 2 & -1 & 2 \end{pmatrix}$",
+               "The number $-1$",
+               "Undefined"
+            ]
+         }
+      ]
+   },
+   {
       "name":"Data Modeling",
       "questions":[
          {
