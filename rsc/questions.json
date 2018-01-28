@@ -3,52 +3,52 @@
       "name":"Calculus of differentiation and integration",
       "questions":[
          {
-            "questionText":"What does the solution of this equation $-y<5+3x$ represents?",
+            "questionText":"What does the solution of this equation $$-y<5+3x$$ represents?",
             "answers":[
                "Half-plane",
-               "$R^2$",
+               "$$R^2$$",
                "A line",
-               "Bounded area in $R^2$"
+               "Bounded area in $$R^2$$"
             ]
          },
          {
-            "questionText":"What does the solution of this equation $-2x +3y -7z = 7$ represents?",
+            "questionText":"What does the solution of this equation $$-2x +3y -7z = 7$$ represents?",
             "answers":[
-               "2D Euclidean plane embedded in $R^3$",
-               "Surface of a ball, $S^2$",
+               "2D Euclidean plane embedded in $$R^3$$",
+               "Surface of a ball, $$S^2$$",
                "A line in space",
                "Half a plane",
                "A finite measure space"
             ]
          },
          {
-            "questionText":"What does the solution of this equation represents? $\begin{array}{lcl} x+2y-z &=& 1 \\ 2x-2y+4z &=& -2 \\ -x+0.5y-z &=& 0 \end{array} $",
+            "questionText":"What does the solution of this equation represents? $$\\begin{array}{lcl} x+2y-z &=& 1 \\\\ 2x-2y+4z &=& -2 \\\\ -x+0.5y-z &=& 0 \\end{array} $$",
             "answers":[
-               "A point in $R^3$",
-               "A line in $R3$",
-               "A plane embedded in $R^3$",
+               "A point in $$R^3$$",
+               "A line in $$R3$$",
+               "A plane embedded in $$R^3$$",
                "Empty set",
                "A circle"
             ]
          },
          {
-            "questionText":"What does the solution of this equation represents? $\int_{-\infty}^{\infty}{e^{-\frac{x^2}{2}} dx} =y $",
+            "questionText":"What does the solution of this equation represents? $$\\int_{-\\infty}^{\\infty}{e^{-\\frac{x^2}{2}} dx} =y $$",
             "answers":[
-               "$\sqrt{2\pi}$",
+               "$$\\sqrt{2\\pi}$$",
                "A density",
-               "$1$",
+               "$$1$$",
                "Undefined",
-               "$0$"
+               "$$0$$"
             ]
          },
          {
-            "questionText":"What are the local and global extrema of the function $f(x)=x^3+3x^2−2x+1$ over the interval $[−4,2]$?",
+            "questionText":"What are the local and global extrema of the function $$f(x)=x^3+3x^2−2x+1$$ over the interval $$[−4,2]$$?",
             "answers":[
-               "Local minimum ($\sim 0.6966852$) and maximum ($\sim 9.303315$); Global minimum (-7) and maximum (17)",
+               "Local minimum ($$\\sim 0.6966852$$) and maximum ($$\\sim 9.303315$$); Global minimum (-7) and maximum (17)",
                "A density",
-               "$1$",
+               "$$1$$",
                "Undefined",
-               "$0$"
+               "$$0$$"
             ]
          }
       ]
@@ -57,16 +57,16 @@
       "name":"Numerical methods",
       "questions":[
          {
-            "questionText":"What does this series represent $\sum_{n=0}^{\infty} {	\frac{(-1)^n}{(2n+1)!} x^{2n+1} }?$?",
+            "questionText":"What does this series represent $$\\sum_{n=0}^{\\infty} {\t\\frac{(-1)^n}{(2n+1)!} x^{2n+1} }?$$?",
             "answers":[
-               "The trigonometric sine function, $sin(x)$",
-               "The trigonometric cosine function, $cos(x)$",
-               "Taylor series expansion of $e^{x}$",
+               "The trigonometric sine function, $$sin(x)$$",
+               "The trigonometric cosine function, $$cos(x)$$",
+               "Taylor series expansion of $$e^{x}$$",
                "A divergent series"
             ]
          },
          {
-            "questionText":"Starting with $x_o=3$, complete 3 iterations of the Newton-Raphson method, $x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$, to estimate a root of $f(x)=x^3-20$, i.e., find a solution to this equation: $f(x)=x^3-20=0$.",
+            "questionText":"Starting with $$x_o=3$$, complete 3 iterations of the Newton-Raphson method, $$x_{n+1}=x_n-\\frac{f(x_n)}{f'(x_n)}$$, to estimate a root of $$f(x)=x^3-20$$, i.e., find a solution to this equation: $$f(x)=x^3-20=0$$.",
             "answers":[
                "2.7",
                "-10",
@@ -81,11 +81,11 @@
       "name":"Matrix manipulations",
       "questions":[
          {
-            "questionText":"If $A_{3\times 3}= 	\begin{pmatrix} 3 & 2 & -1 \\ 2 & -2 & 4 \\ -1 & 1/2 & -1 \end{pmatrix}$ and $x_{3\times 1}= \begin{pmatrix} 1 \\ -2 \\ -2 \end{pmatrix}$, what is the product $A_{3\times 3} \times x_{3\times 1}$?",
+            "questionText":"If $$A_{3\\times 3}= \t\\begin{pmatrix} 3 & 2 & -1 \\\\ 2 & -2 & 4 \\\\ -1 & 1/2 & -1 \\end{pmatrix}$$ and $$x_{3\\times 1}= \\begin{pmatrix} 1 \\\\ -2 \\\\ -2 \\end{pmatrix}$$, what is the product $$A_{3\\times 3} \\times x_{3\\times 1}$$?",
             "answers":[
-               "The vector $(1,-2,0)^t$",
-               "The matrix $\begin{pmatrix} 3 & 2 & -1 \\ -4 & 4 & -8 \\ 2 & -1 & 2 \end{pmatrix}$",
-               "The number $-1$",
+               "The vector $$(1,-2,0)^t$$",
+               "The matrix $$\\begin{pmatrix} 3 & 2 & -1 \\\\ -4 & 4 & -8 \\\\ 2 & -1 & 2 \\end{pmatrix}$$",
+               "The number $$-1$$",
                "Undefined"
             ]
          }
@@ -97,16 +97,16 @@
          {
             "questionText":"Give examples of linear, polynomial and exponential models of an outcome (Y) in terms of some observed input (X)",
             "answers":[
-               "$Y=3X+5$ (Linear), $Y=2X^2+3X$ (Polynomial), $Y = 2e^{-2x}$ (Exponential)",
-               "$Y=2X^2+3X$ (Linear), $Y=3^X+3X+5$ (Polynomial), $Y = 2e^{-2x}$ (Exponential)",
-               "$Y=3^X+3X+5$ (Linear), $Y=2X^2+3X$ (Polynominal), $Y = 2e^{-2x}$(Exponential)",
-               "$Y=X+5$ (Linear), $Y=2X^4-5X$ (Polynominal), $Y = 2X^{-2e}$(Exponential)"
+               "$$Y=3X+5$$ (Linear), $$Y=2X^2+3X$$ (Polynomial), $$Y = 2e^{-2x}$$ (Exponential)",
+               "$$Y=2X^2+3X$$ (Linear), $$Y=3^X+3X+5$$ (Polynomial), $$Y = 2e^{-2x}$$ (Exponential)",
+               "$$Y=3^X+3X+5$$ (Linear), $$Y=2X^2+3X$$ (Polynominal), $$Y = 2e^{-2x}$$(Exponential)",
+               "$$Y=X+5$$ (Linear), $$Y=2X^4-5X$$ (Polynominal), $$Y = 2X^{-2e}$$(Exponential)"
             ]
          },
          {
             "questionText":"What is a Graph?",
             "answers":[
-               "A graph is an ordered pair $G = (V, E)$ comprising a set $V$ of vertices or nodes or points together with a set $E$ of edges or arcs or lines, which are 2-element subsets of $V$",
+               "A graph is an ordered pair $$G = (V, E)$$ comprising a set $$V$$ of vertices or nodes or points together with a set $$E$$ of edges or arcs or lines, which are 2-element subsets of $$V$$",
                "A graph is an object that shows relationship between nodes and vertices",
                "Graph can be any object that conveys some informations",
                "Graph is representation of vertices and nodes to show relationship in the data",
@@ -156,7 +156,7 @@
          {
             "questionText":"What is a p-value?",
             "answers":[
-               "The p-value (probability value) directly corresponds to a critical value of a predefined probability distribution. Under a null hypothesis $H_o$, the p-value corresponds to a critical value of the test statistics equal to, or more extreme, than what was actually observed.",
+               "The p-value (probability value) directly corresponds to a critical value of a predefined probability distribution. Under a null hypothesis $$H_o$$, the p-value corresponds to a critical value of the test statistics equal to, or more extreme, than what was actually observed.",
                "It is the probability of rejecting/accepting Null hypothesis",
                "It is the probability of occurrence of estimate of interest if we were to repeatedly perform the experiment",
                "p-value is similar to test statistic used to reject or accept null hypothesis",
@@ -166,7 +166,7 @@
          {
             "questionText":"How to interpret a confidence interval of a parameter estimate?",
             "answers":[
-               "If repeated samples were taken and the corresponding $(1-\alpha) 100%$-confidence intervals are computed for each sample, $(1-\alpha) 100%$ of the intervals would contain the parameter of interest",
+               "If repeated samples were taken and the corresponding $$(1-\\alpha) 100%$$-confidence intervals are computed for each sample, $$(1-\\alpha) 100%$$ of the intervals would contain the parameter of interest",
                "It is the probability that the point estimate is in the identified range/interval",
                "After we define the confidence interval, the probability of point estimate to be in that range is 1",
                "After we define the confidence interval, the probability of point estimate to be in that range is assumed confidence value",
@@ -179,12 +179,12 @@
       "name":"Sorting Algorithms, and complexity",
       "questions":[
          {
-            "questionText":"Why is the computational complexity of the Bubble Sort algorithm is $O(n^2)$. This algorithm works by comparing each number in the list with the item next to it, and swaps them if needed to reorder the data from the smallest to the largest element.",
+            "questionText":"Why is the computational complexity of the Bubble Sort algorithm is $$O(n^2)$$. This algorithm works by comparing each number in the list with the item next to it, and swaps them if needed to reorder the data from the smallest to the largest element.",
             "answers":[
-               "The inner loop complexity is $O(n)$ at each iteration, and the (independent) outer loop runs for $O(n)$ iterations, so the total computational complexity is $O(n^2)$",
-               "The inner loop complexity $O(n^2)$ at each iteration, and the outer loop runs for $O(n)$ iterations, so the total complexity is the ratio of the complexities of the inner and outer loops, i.e, $O(n^2)$",
-               "The inner loop complexity $O(n^2)$ at each iteration, and the outer loop runs for $O(n^2)$ iterations, so the total complexity is square root of inner and outer i.e., $O(n^2)$",
-               "The inner loop complexity $O(n)$ at each iteration, and the outer loop runs for $O(n^2)$ iterations, so the total complexity is outer divided by inner, i.e., $O(n^2)$",
+               "The inner loop complexity is $$O(n)$$ at each iteration, and the (independent) outer loop runs for $$O(n)$$ iterations, so the total computational complexity is $$O(n^2)$$",
+               "The inner loop complexity $$O(n^2)$$ at each iteration, and the outer loop runs for $$O(n)$$ iterations, so the total complexity is the ratio of the complexities of the inner and outer loops, i.e, $$O(n^2)$$",
+               "The inner loop complexity $$O(n^2)$$ at each iteration, and the outer loop runs for $$O(n^2)$$ iterations, so the total complexity is square root of inner and outer i.e., $$O(n^2)$$",
+               "The inner loop complexity $$O(n)$$ at each iteration, and the outer loop runs for $$O(n^2)$$ iterations, so the total complexity is outer divided by inner, i.e., $$O(n^2)$$",
                "None of them is correct"
             ]
          },
